@@ -13,6 +13,10 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ErrorComponent } from './components/error/error.component';
+import { DetailsComponent } from './components/details/details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,16 @@ import { FooterComponent } from './components/footer/footer.component';
     LogInComponent,
     LogOutComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
