@@ -1,6 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
 import { AllProductosService } from 'src/app/services/all-productos.service';
-import { Product } from './../../interfaces/products.interface';
+import { Component, OnInit, inject } from '@angular/core';
+import { Products } from 'src/app/interfaces/products.—type=“interface”';
 
 @Component({
   selector: 'app-all-products',
@@ -8,14 +8,21 @@ import { Product } from './../../interfaces/products.interface';
   styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent implements OnInit {
-  
-  products: Product[] = [];
+
+  products: Products[] = [];
   productService = inject(AllProductosService)
 
-
-  async ngOnInit() {
-    const response: Product[] = await this.productService.getAll();
-    this.products = response;
+  ngOnInit(): void {
+    this.fetchPosts();
   }
-  
+  fetchPosts(): void {
+    this.productService.getAll().subscribe((
+      data: Products[]) => {
+      this.products = data;
+    },
+      (error) => {
+        console.error('Error al obtener los productos:', error);
+      }
+    );
+  }
 }
