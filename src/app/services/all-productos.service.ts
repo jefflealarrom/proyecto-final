@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Products } from '../interfaces/products.—type=“interface”';
 
 @Injectable({
@@ -16,5 +16,7 @@ export class AllProductosService {
   getAll(): Observable<Products[]>{
     return this.urlHttp.get<Products[]>(this.url)
   }
-
-}
+  getWoman(): Observable<Products[]> {
+    return this.urlHttp.get<Products[]>('${this.url}?gender=Female');
+  }
+  }
