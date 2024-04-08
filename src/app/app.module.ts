@@ -16,6 +16,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -40,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    AppRoutingModule
     
   
   ],

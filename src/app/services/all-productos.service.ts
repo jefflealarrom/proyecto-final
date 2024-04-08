@@ -17,6 +17,6 @@ export class AllProductosService {
     return this.urlHttp.get<Products[]>(this.url)
   }
   getWoman(): Observable<Products[]> {
-    return this.urlHttp.get<Products[]>('${this.url}?gender=Female');
+    return this.urlHttp.get<Products[]>(`${this.url}?gender=Female`);
   }
   }
