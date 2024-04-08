@@ -1,6 +1,7 @@
 import { AllProductosService } from 'src/app/services/all-productos.service';
 import { Component, OnInit, inject } from '@angular/core';
-import { Products } from 'src/app/interfaces/products.—type=“interface”';
+import { Products } from '../../interfaces/products.—type=“interface”';
+
 
 @Component({
   selector: 'app-all-products',
