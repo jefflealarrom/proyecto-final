@@ -17,6 +17,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -43,6 +44,7 @@ import { AppRoutingModule } from './app-routing.module';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     
   
   ],

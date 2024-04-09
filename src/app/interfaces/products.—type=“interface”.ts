@@ -8,5 +8,6 @@ export interface Products {
     price: string;
     gender: string;
     brand: string;
-    id: string
+    id: string;
+    quantity: number;
 }
