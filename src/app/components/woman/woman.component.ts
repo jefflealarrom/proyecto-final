@@ -12,6 +12,7 @@ export class WomanComponent {
 
   products: Products[] = [];
   servicio = inject(AllProductosService)
+ 
   ngOnInit(){
 
       this.servicio.getWoman().subscribe((
