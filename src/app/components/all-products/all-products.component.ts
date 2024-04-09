@@ -24,4 +24,7 @@ export class AllProductsComponent implements OnInit {
       }
     );
   }
+
+  addToCart(product: Products): void {
+  }
 }

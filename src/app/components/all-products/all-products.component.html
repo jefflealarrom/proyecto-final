@@ -3,4 +3,7 @@
     <img [src]="product.img_one" alt="{{ product.name }}">
     <p>{{ product.info }}</p>
     <p>Price: {{ product.price }}</p>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" min="1">
+    <button (click)="addToCart(product)">Añadir a la cesta</button>
   </div>
