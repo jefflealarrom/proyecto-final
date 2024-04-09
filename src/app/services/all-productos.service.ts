@@ -22,5 +22,7 @@ export class AllProductosService {
   getMan(): Observable<Products[]> {
     return this.urlHttp.get<Products[]>(`${this.url}?gender=Male`);
   }
-
+  getId(id: string): Observable<Products[]> {
+    return this.urlHttp.get<Products[]>(`${this.url}?id=${id}`)
   }
+}

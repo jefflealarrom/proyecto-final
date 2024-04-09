@@ -16,8 +16,6 @@ export class ManComponent {
 
       this.servicio.getMan().subscribe((
         data: Products[]) => {
-          console.log(data);
-
         this.products = data;
       })
 
