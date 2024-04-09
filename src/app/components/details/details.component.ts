@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Products } from 'src/app/interfaces/products.—type=“interface”';
+import { AllProductosService } from 'src/app/services/all-productos.service';
 
 @Component({
   selector: 'app-details',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class DetailsComponent {
 
+  products: Products [] = [];
+  servicio = inject(AllProductosService)
+
+  ngOnInit(): void {
+    this.servicio.getId('1').subscribe((data: Products) => {
+      console.log(data);
+      this.products = [data];
+    });
+  }
 }

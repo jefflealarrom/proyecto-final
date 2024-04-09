@@ -1,1 +1,6 @@
-<p>details works!</p>
+<div *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <img [src]="product.img_one" alt="{{ product.name }}">
+    <p>{{ product.info }}</p>
+    <p>Price: {{ product.price }}</p>
+  </div>

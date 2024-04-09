@@ -17,8 +17,7 @@ export class ManComponent {
       this.servicio.getMan().subscribe((
         data: Products[]) => {
           console.log(data);
-
-          this.products = data.filter(product => product.gender === 'Male');
+           this.products = data.filter(product => product.gender === 'Male');
       })
 
   }
