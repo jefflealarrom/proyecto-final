@@ -18,7 +18,7 @@ export class ManComponent {
         data: Products[]) => {
           console.log(data);
 
-        this.products = data;
+          this.products = data.filter(product => product.gender === 'Male');
       })
 
   }
