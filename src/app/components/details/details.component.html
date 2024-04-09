@@ -1,6 +1,50 @@
-<div *ngFor="let product of products">
+<section *ngFor="let product of products">
+<div class="photo">
+<div class="image-container">
+<img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
+      <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
+      <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
+    </div>
+    <div class="buttons">
+<button class="more" (click)="nextImage()">↾</button>
+<button class="less" (click)="prevImage()">⇂</button>
+</div>
+</div>
+
+  <div class="text">
+
+    <div class="info">
     <h3>{{ product.name }}</h3>
-    <img [src]="product.img_one" alt="{{ product.name }}">
-    <p>{{ product.info }}</p>
-    <p>Price: {{ product.price }}</p>
+      <h5>{{ product.brand }}</h5>
+      <h6>{{ product.gender }}</h6>
+      <p>{{ product.info }}</p>
+      <p>Price: {{ product.price }}</p>
+      <label for="quantity">Cantidad</label>
+      <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" min="1">
+      <button routerLink="/shop">Añadir a la cesta</button>
+    </div>
   </div>
+
+
+  </section>
+
+<!-- mostrar todas la imágenes en el componente detail.
+
+img_one
+img_two
+img_three
+
+agregar boton y hacer logica para cambiar de imagenes cuando el usuario haga clic en los botones
+
+definir estructura para aplicar css
+
+imagenes del lado izquierdo y los botones irán a su derecha
+
+a la derecha se mostrara en este orden
+
+name
+brand
+gender
+info
+price
+input de cantidad y boton de agregar al carrito -->

@@ -1,0 +1,91 @@
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.photo {
+    display: flex;
+    max-width: 50%;
+}
+
+.image-container {
+    height: 100%;
+    max-width: 95%;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.buttons button {
+    font-size: 5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5rem 0;
+}
+
+.buttons button:hover {
+    color: #F80A67;
+}
+
+
+.text {
+    width: 50%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    width: 100%; /* Cambia el ancho al 100% para que ocupe todo el espacio disponible */
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    /* background-color: tomato; */
+    padding: 20px; /* Añade espaciado dentro del contenedor */
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+.info h3 {
+    font-size: 24px; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 10px; /* Espacio inferior para separar el título de otros elementos */
+  }
+  
+  .info p {
+    font-size: 16px; /* Tamaño de fuente para los párrafos */
+    margin-bottom: 10px; /* Espacio inferior para separar los párrafos */
+  }
+  
+  .info label {
+    font-size: 16px; /* Tamaño de fuente para las etiquetas */
+    margin-bottom: 5px; /* Espacio inferior para separar las etiquetas de otros elementos */
+  }
+  
+
+  .info button {
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid #ffffff; /* Borde blanco */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px; /* Añade espacio alrededor del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agrega una transición suave */
+  }
+  
+  .info button:hover {
+    background-color: #ffffff; /* Cambia el fondo al pasar el cursor */
+    color: tomato; /* Cambia el color del texto al pasar el cursor */
+    border-color: tomato; /* Cambia el color del borde al pasar el cursor */
+  }
+  
