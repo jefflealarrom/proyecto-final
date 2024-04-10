@@ -1,32 +1,50 @@
 <section *ngFor="let product of products">
-<div class="photo">
-<div class="image-container">
-<img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
+  <div class="photo">
+    <div class="image-container">
+      <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
       <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
       <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
     </div>
     <div class="buttons">
-<button class="more" (click)="nextImage()">↾</button>
-<button class="less" (click)="prevImage()">⇂</button>
-</div>
-</div>
+      <button class="more" (click)="nextImage()">↾</button>
+      <button class="less" (click)="prevImage()">⇂</button>
+    </div>
+  </div>
 
   <div class="text">
 
     <div class="info">
-    <h3>{{ product.name }}</h3>
+      <h3>{{ product.name }}</h3>
       <h5>{{ product.brand }}</h5>
       <h6>{{ product.gender }}</h6>
       <p>{{ product.info }}</p>
-      <p>Price: {{ product.price }}</p>
-      <label for="quantity">Cantidad</label>
-      <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" min="1">
-      <button routerLink="/shop">Añadir a la cesta</button>
+
+      <div class="check">
+
+        <div class="price">{{ product.price }}</div>
+
+        <div class="btns">
+          <label>
+            <select>
+              <option value="">Seleccione una cantidad</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+          <button routerLink="/shop">Añadir a la cesta</button>
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 
 
-  </section>
+</section>
 
 <!-- mostrar todas la imágenes en el componente detail.
 
