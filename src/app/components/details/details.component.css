@@ -131,8 +131,14 @@ select {
 
     .info h3 {
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
     }
-
+.info h5, 
+.info h6 {
+    display: flex;
+    justify-content: center;
+}
     .info p {
         font-size: 0.9rem;
     }
@@ -142,7 +148,7 @@ select {
         display: flex;
         justify-content: center;
         color: #F80A67;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
     }
 
     .btns {
