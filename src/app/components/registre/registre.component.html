@@ -1,1 +1,38 @@
-<p>registre works!</p>
+<head>
+<link rel="stylesheet" href="registre.component.css">
+<title>Formulario de Registro</title>
+</head>
+<main>
+<form class="register" [formGroup]="registro" (ngSubmit)="onSubmit()">
+  <h4>Formulario Registro</h4>
+    <div class="controls">
+      <label class="form-label">Nombre</label>
+      <input type="text"  class="form-control" formControlName="nombre" placeholder="nombre">
+    </div>
+    <div class="controls">
+        <label class="form-label">Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos" placeholder="apellidos">
+      </div>
+      <div class="controls">
+        <label class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" formControlName="correoElectronico" placeholder="correoElectronico">
+        <p class="error" *ngIf="">
+            el campo correo electronico es requerido
+        </p>
+      </div>
+      <div class="controls">
+        <label class="form-label">Contraseña</label>
+        <input type="password" class="form-control" formControlName="contraseña" placeholder="contraseña">
+      </div>
+      <div class="controls">
+        <label class="form-label">confirmar Contraseña</label>
+        <input type="password" class="form-control" formControlName="confirmarContraseña" placeholder="confirmarContraseña">
+      </div>
+      <div>
+      <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
+      <input class="botons" type="submit" value="Registrar">
+      <p><a href="#">¿Ya tengo Cuenta?</a></p>
+      </div>
+    
+  </form>
+</main>
