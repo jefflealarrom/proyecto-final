@@ -248,3 +248,23 @@
       "id": "20"
     }
   ]
+
+
+
+//api de usuarios
+  [
+    {
+      "img": "",
+      "name": "jhon",
+      "lastname": "Doe",
+      "password": "12345678",
+      "id": "1"
+    },
+    {
+      "img": "",
+      "name": "Maria",
+      "lastname": "de jesus",
+      "password": "abc123",
+      "id": "2"
+    }
+  ]

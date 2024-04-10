@@ -7,15 +7,11 @@ section {
 .photo {
     display: flex;
     max-width: 50%;
-    
 }
 
 .image-container {
     max-height: 100%;
-    max-width: 95%;
-    position: relative;
-    transition: top 0.5s ease;
-
+    max-width: 100%;
 }
 
 img {
@@ -28,7 +24,6 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .buttons button {
@@ -42,8 +37,6 @@ img {
 .buttons button:hover {
     color: #F80A67;
 }
-
-
 
 .text {
     width: 50%;
@@ -68,31 +61,19 @@ h6 {
 .info p {
     font-size: 1.1rem;
     text-align: justify;
-    margin-bottom: 2rem;
 }
 
 .check {
-    height: 5rem;
-    width: auto;
     display: flex;
-    justify-content: space-between;
+    text-align: end;
+    width: 100%;
 }
 
-.price {
+
+#price {
     font-size: 4rem;
     color: #F80A67;
     height: 2rem;
-}
-
-
-
-.btns {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-   
 }
 
 .info button {
@@ -122,3 +103,64 @@ select {
     border-bottom: 1px solid black;
 }
 
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .photo {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .buttons {
+        transform: rotate(90deg);
+        height: 3rem;
+    }
+
+    .buttons button {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .text {
+        width: auto;
+    }
+
+    .info h3 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+    }
+
+    #price {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        color: #F80A67;
+        padding-bottom: 0.5rem;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .check {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 2rem;
+    }
+}

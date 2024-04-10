@@ -10,59 +10,32 @@
       <button class="less" (click)="prevImage()">⇂</button>
     </div>
   </div>
-
   <div class="text">
-
     <div class="info">
       <h3>{{ product.name }}</h3>
       <h5>{{ product.brand }}</h5>
       <h6>{{ product.gender }}</h6>
-      <p>{{ product.info }}</p>
-
-      <div class="check">
-
-        <div class="price">{{ product.price }}</div>
-
-        <div class="btns">
-          <label>
-            <select>
-              <option value="">Seleccione una cantidad</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
-          <button routerLink="/shop">Añadir a la cesta</button>
+      <div class="reverse">
+        <p>{{ product.info }}</p>
+        <div class="check">
+          <div class="color">
+            <p id="price">{{ product.price }}</p>
+          </div>
+          <div class="btns">
+            <label>
+              <select>
+                <option value="">Seleccione una cantidad</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+            <button routerLink="/shop">Añadir a la cesta</button>
+          </div>
         </div>
-
       </div>
-
-
     </div>
   </div>
-
-
 </section>
-
-<!-- mostrar todas la imágenes en el componente detail.
-
-img_one
-img_two
-img_three
-
-agregar boton y hacer logica para cambiar de imagenes cuando el usuario haga clic en los botones
-
-definir estructura para aplicar css
-
-imagenes del lado izquierdo y los botones irán a su derecha
-
-a la derecha se mostrara en este orden
-
-name
-brand
-gender
-info
-price
-input de cantidad y boton de agregar al carrito -->
