@@ -1,7 +1,7 @@
 .containerProduct{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10%;
+ 
     gap: 10px;
 }
 .cardProduct{
