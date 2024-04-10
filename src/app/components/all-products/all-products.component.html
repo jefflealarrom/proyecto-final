@@ -1,15 +1,16 @@
-<div class="product-container">
-  <div *ngFor="let product of products" class="product-card">
+<div class="containerProduct">
+  <div *ngFor="let product of products" class="cardProduct">
     <img [src]="product.img_one" alt="{{ product.name }}">
     <h3>{{ product.name }}</h3>
     <h5>{{ product.brand }}</h5>
     <h6>{{ product.gender }}</h6>
+    <p class="none">{{product.info}}</p>
     <p>Price: {{ product.price }}</p>
     <button [routerLink]="['/detail', product.id]">Ver Producto</button>
-    <div class="quantity-container">
+    <div class="containerQuantity">
       <label for="quantity">Cantidad</label>
       <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" min="1">
     </div>
-    <button routerLink="/shop">Añadir a la cesta</button>
+    <button class="none" routerLink="/shop">Añadir a la cesta</button>
   </div>
 </div>

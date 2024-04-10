@@ -1,10 +1,10 @@
-.product-container {
+.containerProduct{
     display: flex;
     flex-wrap: wrap;
     margin-left: 10%;
     gap: 10px;
   }
-  .product-card {
+.cardProduct{
     width: 250px; 
     margin: 10px; 
     padding: 10px;
@@ -13,14 +13,22 @@
         background-color: white;
         border-radius: 5px;
         padding: 10px;
+        margin-top: 10px;
         border: 1px whitesmoke solid;
         cursor: pointer;
-
-    }
-    }
-  .product-card img {
+}
+}
+.cardProduct img{
     width: 100%;
-  }
+}
+.cardProduct .containerQuantity{
+    display: none;
+}
+.cardProduct .none{
+    display: none;
+}
+
+
 
   
   
