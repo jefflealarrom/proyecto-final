@@ -28,17 +28,16 @@ export class LogInComponent  {
     if (this.formulario.valid) {
       const { email, password } = this.formulario.value;
       this.loginService.getUser(email, password).subscribe({
-        next: (response) => {
-         
-          if (response) {
-    
+        next: (response: any) => { // Especifica el tipo de 'response'
+          if (response.authenticated) {
+            // Usuario autenticado correctamente, redirigir al home
             this.router.navigate(['/home']);
           } else {
-
+            // Error de autenticación, mostrar mensaje de error
             this.mensajeError = 'Credenciales incorrectas.';
           }
         },
-        error: (error) => {
+        error: (error: any) => { // Especifica el tipo de 'error'
           console.error('Error al hacer login:', error);
           this.mensajeError = 'Ocurrió un error al intentar hacer login.';
         }
