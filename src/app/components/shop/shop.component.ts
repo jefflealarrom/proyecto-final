@@ -27,4 +27,8 @@ export class ShopComponent implements OnInit {
     // Carga los productos del carrito cuando se añade uno nuevo
     this.loadCartItems();
   }
+  removeCart(product: any) {
+    this.ShopService.removeCart(product);
+    this.loadCartItems();
+  }
 }

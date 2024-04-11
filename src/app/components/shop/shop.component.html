@@ -13,7 +13,7 @@
         </div>
         <div class="price">{{ product.price }}</div>
       </div>
-      <button [routerLink]="['/detail', product.id]">Ver Producto</button>
-    </article>
+      <button class="none" [routerLink]="['/detail', product.id]">Ver Producto</button>
+      <button (click)="removeCart(product)">Eliminar</button>    </article>
     
   </section>
