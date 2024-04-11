@@ -12,30 +12,6 @@
   </div>
   <div class="text">
     <div class="info">
-<<<<<<< HEAD
-      <h3>{{ product.name }}</h3>
-      <h5>{{ product.brand }}</h5>
-      <h6>{{ product.gender }}</h6>
-      <div class="reverse">
-        <p>{{ product.info }}</p>
-        <div class="check">
-          <div class="color">
-            <p id="price">{{ product.price }}</p>
-          </div>
-          <div class="btns">
-            <label>
-              <select>
-                <option value="">Seleccione una cantidad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </label>
-            <button routerLink="/shop">Añadir a la cesta</button>
-          </div>
-=======
       <h3>{{ products.name }}</h3>
       <h5>{{ products.brand }}</h5>
       <h6>{{ products.gender }}</h6>
@@ -57,7 +33,6 @@
             </select>
           </label>
           <button (click)="addToCart(products)" routerLink="/shop">Añadir a la cesta</button>
->>>>>>> 3cdf16fa1448214e04f903a86b03007cd950d0dc
         </div>
       </div>
     </div>
