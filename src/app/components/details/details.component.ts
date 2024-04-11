@@ -1,3 +1,4 @@
+import { ShopService } from './../../services/shop.service';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute,  } from '@angular/router';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
@@ -40,6 +41,13 @@ export class DetailsComponent {
     // if (this.index > 0) {
       this.index--;
     // }
+  }
+  constructor(private ShopService: ShopService) { }
+
+  addToCart(product: any) {
+    this.ShopService.addToCart(product);
+    console.log(ShopService);
+    
   }
 
 }
