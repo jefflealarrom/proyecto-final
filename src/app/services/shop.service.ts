@@ -4,19 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ShopService {
-
-  cartItems: any[] = []
+  cartItems: any[] = [];
 
   constructor() { }
-
-  addToCart(product: any) {
-    this.cartItems.push(product)
-    console.log('Producto agregado al carrito:', product);
-}
-  removeCart(product: any) {
+  addToCart(product: any): void {
+    this.cartItems.push(product);
+  }
+  removeCart(product: any): void {
     const index = this.cartItems.indexOf(product);
     if (index !== -1) {
-    this.cartItems.splice(index, 1);
+      this.cartItems.splice(index, 1);
+    }
   }
-}
 }
