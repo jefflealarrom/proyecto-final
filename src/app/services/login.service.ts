@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   getUser(email: string, password: string): Observable<any> {
-    return this.http.post(this.urlUser, { email, password }).pipe(
-      tap(response => console.log('Respuesta de la API:', response)) 
-    );
+    return this.http.post(this.urlUser, { email, password });
   }
 }
-
