@@ -13,9 +13,9 @@ export class ShopService {
     this.cartItems.push(product)
     console.log('Producto agregado al carrito:', product);
 }
-removeCart(product: any) {
-  const index = this.cartItems.indexOf(product);
-  if (index !== -1) {
+  removeCart(product: any) {
+    const index = this.cartItems.indexOf(product);
+    if (index !== -1) {
     this.cartItems.splice(index, 1);
   }
 }
