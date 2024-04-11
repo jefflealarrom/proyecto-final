@@ -6,6 +6,13 @@
 
 // https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/products
 
+
+
+//api de usuario
+
+//https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/user
+
+
 [
     {
       "createdAt": "2024-04-06T18:18:56.126Z",
@@ -252,19 +259,37 @@
 
 
 //api de usuarios
+  
+
   [
     {
-      "img": "",
-      "name": "jhon",
-      "lastname": "Doe",
-      "password": "12345678",
+      "img": "https://media.glamour.mx/photos/649e227037a88713dca740d0/16:9/w_2560%2Cc_limit/productos_de_barbie.jpg",
+      "name": "Barbie",
+      "lastname": "Millicen",
+      "password": "imbarbie",
+      "repito_password": "imbarbie",
+      "email": "barbie@barbie.com",
+      "repito_email": "barbie@barbie.com",
       "id": "1"
     },
     {
-      "img": "",
-      "name": "Maria",
-      "lastname": "de jesus",
-      "password": "abc123",
+      "img": "https://64.media.tumblr.com/45cb5a1d67c69477e28a9a2675ec991a/d0ee241bc4581a55-ba/s640x960/09c2d7485a6b3ba85a9fdb1c423e271711bf65d8.jpg",
+      "name": "Ken",
+      "lastname": "Carson",
+      "password": "imken",
+      "repito_password": "imken",
+      "email": "ken@barbie.com",
+      "repito_email": "ken@barbie.com",
       "id": "2"
+    },
+    {
+      "img": "img 3",
+      "name": "name 3",
+      "lastname": "lastname 3",
+      "password": "password 3",
+      "repito_password": "repito_password 3",
+      "email": "email 3",
+      "repito_email": "repito_email 3",
+      "id": "3"
     }
   ]
