@@ -9,7 +9,6 @@ export class ShopService {
   constructor() { }
   addToCart(product: any): void {
     this.cartItems.push(product);
-    
   }
   removeCart(product: any): void {
     const index = this.cartItems.indexOf(product);
@@ -18,3 +17,4 @@ export class ShopService {
     }
   }
 }
+
