@@ -1,9 +1,9 @@
-<section >
+<section *ngFor="let product of products">
   <div class="photo">
     <div class="image-container">
-      <img [src]="products.img_one" alt="{{ products.name }}" *ngIf="index === 0">
-      <img [src]="products.img_two" alt="{{ products.name }}" *ngIf="index === 1">
-      <img [src]="products.img_three" alt="{{ products.name }}" *ngIf="index === 2">
+      <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
+      <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
+      <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
     </div>
     <div class="buttons">
       <button class="more" (click)="nextImage()">↾</button>
@@ -12,29 +12,32 @@
   </div>
   <div class="text">
     <div class="info">
-      <h3>{{ products.name }}</h3>
-      <h5>{{ products.brand }}</h5>
-      <h6>{{ products.gender }}</h6>
-      <p>{{ products.info }}</p>
-
-      <div class="check">
-
-        <div class="price">{{ products.price }}</div>
-
-        <div class="btns">
-          <label>
-            <select>
-              <option value="">Seleccione una cantidad</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
-          <button (click)="addToCart(products)" routerLink="/shop">Añadir a la cesta</button>
+      <h3>{{ product.name }}</h3>
+      <h5>{{ product.brand }}</h5>
+      <h6>{{ product.gender }}</h6>
+      <div class="reverse">
+        <p>{{ product.info }}</p>
+        <div class="check">
+          <div class="color">
+            <p id="price">{{ product.price }}</p>
+          </div>
+          <div class="btns">
+            <label>
+              <select>
+                <option value="">Seleccione una cantidad</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+            <button (click)="addToCart(product)" routerLink="/shop">Añadir a la cesta</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+

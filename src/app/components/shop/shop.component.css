@@ -4,8 +4,9 @@
     width: 100vw;
     height: auto;
     justify-content: center;
+    
 }
-
+ 
 .cardProduct {
     width: 20rem;
     margin: 1rem;
@@ -13,25 +14,26 @@
     height: auto;
     background-color: whitesmoke;
     border-radius: 1rem;
+    
 }
-
-
+ 
+ 
 img {
     width: 100%;
     border-radius: 1rem;
 }
-
+ 
 .info {
     margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
-
+ 
 .price {
     font-size: 3rem;
     color: #F80A67;
 }
-
+ 
 button {
     width: 100%;
     background-color: transparent;
@@ -40,16 +42,14 @@ button {
     margin-top: 1rem;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
     justify-content: center;
     align-items: center;
 }
-
-
+ 
+ 
 button:hover {
-    background-color: #F80A67; 
+    background-color: #F80A67;
 }
-.none{
-    display: none;
-}
-
+ 
+ 
