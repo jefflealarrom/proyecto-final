@@ -1,7 +1,9 @@
+import { ShopService } from './../../services/shop.service';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute,  } from '@angular/router';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
 import { AllProductosService } from 'src/app/services/all-productos.service';
+
 
 @Component({
   selector: 'app-details',
@@ -14,6 +16,7 @@ export class DetailsComponent {
   servicio = inject(AllProductosService)
   router = inject(ActivatedRoute)
   index: number = 0;
+  shopService = inject(ShopService)
   
 
   ngOnInit(): void {
@@ -40,6 +43,10 @@ export class DetailsComponent {
     if (this.index > 0) {
       this.index--;
     }
+  }
+
+  addToCart(product: any) {
+    this.shopService.addToCart(product);
   }
 
 }

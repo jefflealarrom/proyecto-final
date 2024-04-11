@@ -1,1 +1,14 @@
-<p>shop works!</p>
+<section class="containerProduct">
+    <article *ngFor="let product of cartItems" class="cardProduct">
+      <img [src]="product.img_one" alt="{{ product.name }}">
+      <div class="info">
+        <div>
+          <h3>{{ product.name }}</h3>
+          <small>{{product.gender}}</small>
+          <h6>{{product.brand}}</h6>
+        </div>
+        <div class="price">{{ product.price }}</div>
+      </div>
+      <button (click)="removeCart(product)">Eliminar</button>    </article>
+    
+  </section>
