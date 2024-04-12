@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import AboutComponent from './components/about/about.component';
+
 
 
 
@@ -37,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ErrorComponent,
     DetailsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

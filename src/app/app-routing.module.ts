@@ -1,3 +1,4 @@
+import { NavComponent } from './components/nav/nav.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +12,7 @@ import { LogOutComponent } from './components/log-out/log-out.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FooterComponent } from './components/footer/footer.component';
+import AboutComponent from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -26,6 +28,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'footer', component: FooterComponent },
   { path: '**', component: ErrorComponent },
+  { path: 'about', component: AboutComponent },
 
 
 ];
@@ -33,6 +36,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 
 export class AppRoutingModule { }

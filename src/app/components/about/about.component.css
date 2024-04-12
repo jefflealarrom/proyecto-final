@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-image: linear-gradient(to top, grey 50%, transparent 100%);
+}
+div{
+    margin: 1rem;
+}
+h5{
+    margin: 1rem;
+}
+a{
+    color: black;
+    font-size: small;
+}
+ul{
+    margin: 1rem;
+    li{
+        margin: 5px;
+        font-size: small;
+    }
+}
+.form{
+    border-left: 1px solid black;
+    padding-left: 5rem;
+}
+form{
+    display: flex;
+    flex-direction: column; 
+    align-items: baseline ; 
+}
+
+.form label {
+    margin-bottom: 0.5rem; 
+    font-size: small;
+}
+.form input{
+    background-color: darkgray;
+    border: none;
+}
+.label{
+    display: flex;
+    gap: 5px;
+    
+}
+.form button {
+    margin-top: 0.5rem; 
+    color: whitesmoke;
+    background-color: black;
+    padding: 5px;
+    border-radius: 1px gray solid;
+    border-radius: 5px;
+    font-size: small;
+}
+.about{
+    border-left: 1px solid black;
+    padding-left: 5rem;
+}
