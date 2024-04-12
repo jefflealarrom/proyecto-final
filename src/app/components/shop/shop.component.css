@@ -4,6 +4,7 @@
     width: 100vw;
     height: auto;
     justify-content: center;
+    
 }
 
 .cardProduct {
@@ -13,6 +14,7 @@
     height: auto;
     background-color: whitesmoke;
     border-radius: 1rem;
+    
 }
 
 
