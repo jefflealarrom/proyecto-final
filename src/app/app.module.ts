@@ -18,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import AboutComponent from './components/about/about.component';
+import AboutComponent from "../app/components/about/about.component";
+
 
 
 
