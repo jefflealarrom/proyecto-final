@@ -1,7 +1,7 @@
 import { ShopService } from './../../services/shop.service';
 import { Component, OnInit } from '@angular/core';
-
-
+ 
+ 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -25,3 +25,4 @@ export class ShopComponent implements OnInit {
     this.loadCartItems();
   }
 }
+ 

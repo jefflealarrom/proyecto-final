@@ -30,7 +30,7 @@ img {
 .price {
     font-size: 3rem;
     color: #F80A67;
-    
+    background-color: blue;
 }
 
 button {
