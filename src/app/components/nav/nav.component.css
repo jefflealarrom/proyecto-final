@@ -1,7 +1,7 @@
 header {
     width: 100vw;
     height: auto; 
-    background-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    background-image: linear-gradient(to bottom, #f80a6564 75%, transparent 100%);
 
     figure {
         display: flex;
