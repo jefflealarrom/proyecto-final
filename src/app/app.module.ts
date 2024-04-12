@@ -19,6 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import AboutComponent from "../app/components/about/about.component";
+
+
+
+
 
 
 
@@ -39,6 +44,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ErrorComponent,
     DetailsComponent,
     CheckoutComponent,
+    AboutComponent,
+
   ],
   imports: [
     BrowserModule,
