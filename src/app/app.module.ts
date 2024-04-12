@@ -11,7 +11,6 @@ import { RegistreComponent } from './components/registre/registre.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -40,7 +39,6 @@ import AboutComponent from "../app/components/about/about.component";
     LogInComponent,
     LogOutComponent,
     HomeComponent,
-    FooterComponent,
     ErrorComponent,
     DetailsComponent,
     CheckoutComponent,

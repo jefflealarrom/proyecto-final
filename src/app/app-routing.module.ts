@@ -27,8 +27,9 @@ const routes: Routes = [
   { path: 'logOut', component: LogOutComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'checkout', component: CheckoutComponent},
-  { path: '**', component: ErrorComponent },
   { path: 'footer', component: AboutComponent },
+  { path: '**', component: ErrorComponent },
+ 
 
 
 ];
