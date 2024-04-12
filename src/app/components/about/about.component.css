@@ -1,11 +1,12 @@
 .container{
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    /* gap: 3rem; */
     background-image: linear-gradient(to top, grey 50%, transparent 100%);
+    width: 100vw;
 }
-div{
-    margin: 1rem;
+.rrss{
+    padding-right: 10vh;
 }
 h5{
     margin: 1rem;
@@ -24,6 +25,11 @@ ul{
 .form{
     border-left: 1px solid black;
     padding-left: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 15%;
 }
 form{
     display: flex;
@@ -34,6 +40,7 @@ form{
 .form label {
     margin-bottom: 0.5rem; 
     font-size: small;
+
 }
 .form input{
     background-color: darkgray;
@@ -42,6 +49,7 @@ form{
 .label{
     display: flex;
     gap: 5px;
+  align-items: flex-start;
     
 }
 .form button {
