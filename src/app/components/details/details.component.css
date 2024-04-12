@@ -1,14 +1,15 @@
-.home-button {
-    position: absolute; 
-    top: 0;
+.home-button-all {
     right: 0;
-    background-color: #F80A67; 
-    color: white; 
-    padding: 0.5rem 1rem; 
-    border: none; 
-    border-radius: 0.5rem; 
-    cursor: pointer; 
-    z-index: 1; 
+    background-color: #f80a6564;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.home-button{
+    display: none;
 }
 
 section {
@@ -178,9 +179,22 @@ select {
         flex-direction: column-reverse;
         padding-bottom: 2rem;
     }
+
+    .home-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #f80a6564;;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+    }
+
+    .home-button-all {
+        display: none;
+    }
 }
-
-
-
-
-
