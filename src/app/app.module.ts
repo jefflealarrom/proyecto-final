@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ErrorComponent,
     DetailsComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

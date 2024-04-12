@@ -11,6 +11,7 @@ import { LogOutComponent } from './components/log-out/log-out.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'logIn', component: LogInComponent },
   { path: 'logOut', component: LogOutComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'checkout', component: CheckoutComponent},
   { path: 'footer', component: FooterComponent },
   { path: '**', component: ErrorComponent },
 
