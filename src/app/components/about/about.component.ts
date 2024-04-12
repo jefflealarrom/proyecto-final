@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.css']
 })
-export default class AboutComponent {
+export class AboutComponent {
     submitForm() {
         console.log('Formulario enviado');
 }

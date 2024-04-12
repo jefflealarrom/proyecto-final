@@ -11,7 +11,7 @@ import { LogOutComponent } from './components/log-out/log-out.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ErrorComponent } from './components/error/error.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-import AboutComponent from './components/about/about.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
