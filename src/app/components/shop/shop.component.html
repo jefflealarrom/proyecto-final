@@ -1,14 +1,24 @@
 <section class="containerProduct">
-    <article *ngFor="let product of cartItems" class="cardProduct">
-      <img [src]="product.img_one" alt="{{ product.name }}">
-      <div class="info">
-        <div>
+  <ng-container *ngIf="cartItems.length > 0; else noProducts">
+    <h2>Estos son tus productos:</h2>
+    <article *ngFor="let product of cartItems">
+      <section class="cardProduct">
+        <hr>
+        <img [src]="product.img_one" alt="{{ product.name }}">
+        <article class="info">
           <h3>{{ product.name }}</h3>
           <small>{{product.gender}}</small>
           <h6>{{product.brand}}</h6>
-        </div>
-        <div class="price">{{ product.price }}</div>
-      </div>
-      <button (click)="removeCart(product)">Eliminar</button>    </article>
-    
-  </section>
+          <button class="yes" [routerLink]="['/checkout', { products: cartItems }]" (click)="buyOne(product)">✓</button>
+          <button class="no" (click)="removeCart(product)">𐄂</button>
+        </article>
+      </section>
+    </article>
+    <button class="yes" [routerLink]="['/checkout', { products: cartItems }]" (click)="buyAll()">Comprar todo</button>
+    <button class="no" (click)="deleteAll()">Eliminar todo</button>
+  </ng-container>
+  <ng-template #noProducts>
+    <p>No hay productos añadidos.</p>
+  </ng-template>
+  <button class="yes" [routerLink]="['/home']">Volver a la tienda</button>
+</section>

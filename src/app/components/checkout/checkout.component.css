@@ -1,0 +1,50 @@
+section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+.product-item {
+    width: 20rem;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.product-item img {
+    max-width: 10rem;
+    max-height: auto;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.yes:hover {
+    background-color: #F80A67;
+}
