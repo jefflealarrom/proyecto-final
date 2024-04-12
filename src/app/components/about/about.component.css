@@ -1,59 +1,94 @@
-.container{
+.container {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    background-image: linear-gradient(to top, grey 50%, transparent 100%);
-}
-div{
-    margin: 1rem;
-}
-h5{
-    margin: 1rem;
-}
-a{
-    color: black;
-    font-size: small;
-}
-ul{
-    margin: 1rem;
-    li{
-        margin: 5px;
-        font-size: small;
-    }
-}
-.form{
-    border-left: 1px solid black;
-    padding-left: 5rem;
-}
-form{
-    display: flex;
-    flex-direction: column; 
-    align-items: baseline ; 
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    justify-content: space-around;
+    background-image:
+        linear-gradient(to top, #f80a6564 10%, transparent 100%);
+    align-items: center;
 }
 
-.form label {
-    margin-bottom: 0.5rem; 
-    font-size: small;
-}
-.form input{
-    background-color: darkgray;
-    border: none;
-}
-.label{
+.rrss {
+    height: auto;
+    width: auto;
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #f80a6564;
+}
+
+li {
+    font-size: small;
+    padding: 0.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: black;
+    margin-bottom: 1rem;
     
 }
-.form button {
-    margin-top: 0.5rem; 
-    color: whitesmoke;
-    background-color: black;
-    padding: 5px;
-    border-radius: 1px gray solid;
-    border-radius: 5px;
-    font-size: small;
+
+.form input::placeholder {
+    color: black;
 }
-.about{
-    border-left: 1px solid black;
-    padding-left: 5rem;
+
+.form button {
+    width: 110%;
+    padding: 0.7rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #f80a6564;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 2rem;
+}
+
+.form button:hover {
+    background-color: #f80a6564;
+    border: none;
+    transform: scale(1.05);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.fa-solid { 
+    color: #f80a6564;
 }

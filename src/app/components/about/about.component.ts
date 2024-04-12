@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export default class AboutComponent {
     submitForm() {
-        
         console.log('Formulario enviado');
 }
 }
