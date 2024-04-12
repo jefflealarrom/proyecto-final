@@ -1,6 +1,6 @@
 <footer class="container">
-    <section class="rrss">
-<h5>Estamos en:</h5>
+    <article class="rrss">
+        <h5>Estamos en:</h5>
         <ul>
             <li>
                 <a routerLink="/**">
@@ -18,20 +18,21 @@
                     </i> Facebook</a>
             </li>
         </ul>
-    </section>
-    <div class="form">
+    </article>
+    <article class="form">
         <h5>Descuentos extras</h5>
         <form (submit)="submitForm()">
             <label for="email"></label>
             <input type="email" id="email" name="email" required placeholder="Tu mejor email">
             <button routerLink="/**" type="submit">Lo Quiero</button>
         </form>
-    </div>
-    <div class="about">
+    </article>
+    <article class="about">
         <h5>Estamos contigo</h5>
         <ul>
             <li><i class="fa-solid fa-phone"></i> +34 123456789</li>
             <li><i class="fa-solid fa-location-dot"></i> Calle perdida 1, Madrid</li>
         </ul>
-    </div>
+    </article>
+
 </footer>

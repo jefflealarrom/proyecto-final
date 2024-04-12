@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
 }
 
 a {
@@ -31,41 +30,34 @@ li {
     padding: 0.5rem;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-}
-
 h5 {
     display: flex;
     justify-content: center;
     color: black;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
-h5{
-    margin: 1rem;
+form input[type="email"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #f80a6564;
+    border-radius: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 0.5;
+    color: #f80a6564;
+    background-color: #fff;
+    transition: border-color 0.3s;
 }
 
-a{
-    color: black;
-    font-size: small;
-}
-
-.form{
-    border-left: 1px solid black;
-    padding-left: 5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 15%;
+form input[type="email"]:focus {
+    border-color: #f80a65;
+    outline: none;
 }
 
 .form input::placeholder {
-    color: black;
+    color: gray;
 }
 
 .form button {
@@ -93,6 +85,26 @@ a{
     align-items: center;
 }
 
-.fa-solid { 
+.fa-solid {
     color: #f80a6564;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .form button {
+        margin-bottom: 1rem;
+    }
+
+    .container>.form {
+        order: -1;
+    }
 }
