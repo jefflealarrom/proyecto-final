@@ -40,6 +40,10 @@ p {
     font-size: 1.rem;
 }
 
+h5 {
+    color: #F80A67;
+}
+
 button {
     background-color: transparent;
     border-radius: 0.5rem;
@@ -61,6 +65,35 @@ button {
     background-color: chartreuse;
 }
 
+.total {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.compra {
+    display: flex;
+    flex-direction: column;
+}
+#total {
+    color: #F80A67;
+    padding: 0;
+    font-size: 3rem;
+    
+}
+
+.final {
+    padding: 0;
+    
+}
+
 @media (max-width: 768px) {
     .cardProduct {
         width: 100%;
@@ -79,5 +112,9 @@ button {
 
     .price {
         font-size: 1rem;
+    }
+
+    .total {
+        width: 100%;
     }
 }

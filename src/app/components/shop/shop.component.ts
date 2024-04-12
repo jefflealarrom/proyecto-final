@@ -11,11 +11,13 @@ import { Component, OnInit, inject } from '@angular/core';
 export class ShopComponent implements OnInit {
 
   cartItems: any[] = [];
+  total: number = 0;
   shopService = inject(ShopService)
   router = inject(Router)
 
   ngOnInit(): void {
     this.loadCartItems();
+    this.calculateTotal();
   }
 
   loadCartItems() {
@@ -25,11 +27,13 @@ export class ShopComponent implements OnInit {
   addToCart(product: any) {
     this. shopService.addToCart(product);
     this.loadCartItems();
+    this.calculateTotal();
   }
 
   removeCart(product: any) {
     this.shopService.removeCart(product);
     this.loadCartItems();
+    this.calculateTotal();
   }
 
   buyAll() {
@@ -47,6 +51,11 @@ export class ShopComponent implements OnInit {
     this.loadCartItems();
   }
 
+  calculateTotal() {
+    this.total = this.cartItems.reduce((acc, item) => {
+      const price = parseFloat(item.price.replace(',', '.'));
+      return acc + price;
+    }, 0);
+  }
 }
-
 
