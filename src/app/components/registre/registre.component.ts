@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registre.component.css']
 })
 export class RegistreComponent {
-private loginService = inject(LoginService)
+  private loginService = inject(LoginService)
   private router = inject(Router)
   mensajeEnviado: boolean = false;
   formulario: FormGroup;
@@ -51,7 +51,7 @@ private loginService = inject(LoginService)
     }
   }
   close(): void {
-    
+
     this.router.navigate(['/blog']);
   }
 }

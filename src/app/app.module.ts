@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AboutComponent } from "../app/components/about/about.component";
 import { ShowUserComponent } from './components/show-user/show-user.component';
+import { EdisUserComponent } from './components/edis-user/edis-user.component';
 
 
 
@@ -45,6 +46,7 @@ import { ShowUserComponent } from './components/show-user/show-user.component';
     CheckoutComponent,
     AboutComponent,
     ShowUserComponent,
+    EdisUserComponent,
 
   ],
   imports: [

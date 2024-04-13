@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { LoginService } from './../../services/login.service';
 import { Router } from '@angular/router';
 
@@ -9,16 +9,23 @@ import { Router } from '@angular/router';
 })
 export class ShowUserComponent implements OnInit {
   currentUser: any;
-
-  constructor(private loginService: LoginService, private router: Router) {}
+  private loginService = inject(LoginService)
+  private router = inject(Router)
 
   ngOnInit(): void {
-    this.currentUser = this.loginService.getCurrentUserFromLocalStorage();
+    this.loadCurrentUser();
   }
 
   logout(): void {
     this.loginService.logout();
-    this.router.navigate(['/logIn']); // Redirige a la página de inicio de sesión después del cierre de sesión
+    this.router.navigate(['/logIn']); 
+  }
+
+  editUser(): void {
+    this.router.navigate(['/edit-user']); 
+  }
+
+  loadCurrentUser(): void {
+    this.currentUser = this.loginService.getCurrentUserFromLocalStorage();
   }
 }
-

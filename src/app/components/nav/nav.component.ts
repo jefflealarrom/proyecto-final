@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
-    
   menuOpen: boolean = false;
 
   toggleMenu(): void {

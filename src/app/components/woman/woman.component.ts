@@ -14,13 +14,9 @@ export class WomanComponent {
   servicio = inject(AllProductosService)
  
   ngOnInit(){
-
-      this.servicio.getWoman().subscribe((
+    this.servicio.getWoman().subscribe((
         data: Products[]) => {
-
-        this.products = data;
+          this.products = data;
       })
-
+    }
   }
-
-}

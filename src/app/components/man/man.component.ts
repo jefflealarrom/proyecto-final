@@ -11,14 +11,13 @@ export class ManComponent {
 
   products: Products[] = [];
   servicio = inject(AllProductosService)
-  
-  ngOnInit(){
 
-      this.servicio.getMan().subscribe((
-        data: Products[]) => {
-          console.log(data);
-           this.products = data.filter(product => product.gender === 'Male');
-      })
+  ngOnInit() {
+    this.servicio.getMan().subscribe((
+      data: Products[]) => {
+      console.log(data);
+      this.products = data.filter(product => product.gender === 'Male');
+    })
 
   }
 

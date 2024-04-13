@@ -16,26 +16,22 @@
             <input type="password" formControlName="password" placeholder="Contraseña">
             <div
                 *ngIf="formulario.get('password')?.invalid && (formulario.get('password')?.dirty || formulario.get('password')?.touched)">
-
                 <div *ngIf="formulario.get('password')?.errors?.['required']">
                     <p class="small">La contraseña es requerida</p>
                 </div>
-
                 <div *ngIf="formulario.get('password')?.errors?.['minlength']">
                     <p class="small">La contraseña debe tener al menos 8
                         caracteres</p>
                 </div>
             </div>
         </div>
-        <button type="submit" [disabled]="!formulario.valid" [ngClass]="{'button-enabled': formulario.valid}">Enviar</button>
-
+        <button type="submit" [disabled]="!formulario.valid"
+            [ngClass]="{'button-enabled': formulario.valid}">Enviar</button>
         <div *ngIf="mensajeUser" class="send">
             <a [routerLink]="'/registrar'">{{ mensajeUser }}</a>
         </div>
-        
         <div *ngIf="mensajeError" class="send">
             <a [routerLink]="'/registrar'">{{ mensajeError }}</a>
         </div>
-        
     </form>
 </section>

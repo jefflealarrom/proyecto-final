@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AboutComponent } from './components/about/about.component';
 import { ShowUserComponent } from './components/show-user/show-user.component';
+import { EdisUserComponent } from './components/edis-user/edis-user.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'checkout', component: CheckoutComponent},
   { path: 'user', component:ShowUserComponent },
+  { path: 'edit-user', component: EdisUserComponent },
   { path: 'footer', component: AboutComponent },
   { path: '**', component: ErrorComponent },
  

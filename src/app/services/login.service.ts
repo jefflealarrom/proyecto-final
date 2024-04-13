@@ -11,13 +11,10 @@ export class LoginService {
   private urlUser = 'https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/user';
   private http = inject(HttpClient)
 
-  
-
   getUser(email: string, password: string): Observable<any> {
     const params = new HttpParams().set('email', email).set('password', password);
     return this.http.get(this.urlUser, { params });
   }
-
 
   setUserLocalStorage(user: any): void {
     localStorage.setItem('currentUser', JSON.stringify(user));
@@ -30,6 +27,12 @@ export class LoginService {
 
   logout(): void {
     localStorage.removeItem('currentUser');
+  }
+
+  updateUser(user: any): Observable<any> {
+    const userId = user.id; 
+    const url = `${this.urlUser}/${userId}`;
+    return this.http.put(url, user);
   }
 }
 

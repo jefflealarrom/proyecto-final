@@ -2,7 +2,7 @@ export interface Products {
     createdAt: string,
     name: string,
     lastname: string,
-    img: string,
+    image: string,
     password:string,
     repito_password: string,
     email: string,
