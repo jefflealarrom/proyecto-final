@@ -28,7 +28,9 @@ export class LogInComponent implements OnInit {
     const { email, password } = this.formulario.value;
     this.loginService.getUser(email, password).subscribe({
       next: (response: any[]) => {
-        if (response.some(user => user.email === email && user.password === password)) {
+        const user = response.find(u => u.email === email && u.password === password);
+        if (user) {
+          this.loginService.setUserLocalStorage(user);
           this.router.navigate(['/user']);
         } else {
           this.mensajeError = null;
@@ -42,5 +44,5 @@ export class LogInComponent implements OnInit {
       }
     });
   }
-  
 }
+

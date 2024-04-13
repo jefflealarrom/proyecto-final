@@ -19,8 +19,24 @@ export class LoginService {
   }
 
 
+  setUserLocalStorage(user: any): void {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+  }
 
-}  
+  getCurrentUserFromLocalStorage(): any {
+    const userString = localStorage.getItem('currentUser');
+    return userString ? JSON.parse(userString) : null;
+  }
+
+  logout(): void {
+    localStorage.removeItem('currentUser');
+  }
+}
+
+
+
+
+
 
 
 // getUser(email: string, password: string): Observable<any> {
