@@ -1,1 +1,100 @@
-<p>registre works!</p>
+<section class="formularios">
+  
+
+    <a [routerLink]="['/registre']"></a>
+  
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+   
+      
+      <h2>Registrate</h2>
+      
+      <div class="form-group">
+        <label for="nombre"></label>
+        <input type="text" formControlName="name" placeholder="Nombre">
+  
+        <div>
+  
+          <div *ngIf="formulario.get('name')?.errors?.['required']">
+            <p class="small">El título es requerido</p>
+          </div>
+  
+          <div *ngIf="formulario.get('name')?.errors?.['minlength']">
+            <p class="small">El título debe tener al menos 3
+              caracteres</p>
+          </div>
+        </div>
+  
+      </div>
+   <div class="form-group">
+        <label for="apellidos"></label>
+        <input type="text" formControlName="lastname" placeholder="Apellidos">
+  
+        <div
+          *ngIf="formulario.get('lastname')?.invalid && (formulario.get('lastname')?.dirty || formulario.get('lastname')?.touched)">
+  
+          <div *ngIf="formulario.get('lastname')?.errors?.['required']">
+            <p class="small">El apellido es requerido</p>
+          </div>
+  
+          <div *ngIf="formulario.get('lastname')?.errors?.['minlength']">
+            <p class="small">El apellido debe tener al menos 3
+              caracteres</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email"></label>
+        <input type="email" formControlName="email" placeholder="Correo">
+        <div
+          *ngIf="formulario.get('email')?.invalid && (formulario.get('email')?.dirty || formulario.get('email')?.touched)">
+  
+          <div *ngIf="formulario.get('email')?.errors?.['required']">
+            <p class="small">El email es requerido</p>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="form-group">
+        <label for="password"></label>
+        <input type="password" formControlName="password" placeholder="Contraseña">
+       
+  
+            <p *ngIf="formulario.get('password')?.errors?.['required']" class="small">La contraseña es requerida</p>
+       
+            <p *ngIf="formulario.get('password')?.errors?.['minlength']" class="small">La contraseña debe tener al menos 8
+              caracteres</p>
+      
+    
+      </div>
+  
+      <div class="form-group">
+        <label for="repite_password"></label>
+        <input type="password" formControlName="repite_password" placeholder="Repite tu contraseña">
+  
+        <div
+          *ngIf="formulario.get('repite_password')?.invalid && (formulario.get('repite_password')?.dirty || formulario.get('repite_password')?.touched)">
+  
+          <div *ngIf="formulario.get('repite_password')?.errors?.['required']">
+            <p class="small">La repeticion de contraseña es requerida</p>
+          </div>
+  
+          <div *ngIf="formulario.get('repite_password')?.errors?.['minlength']">
+            <p class="small">La contraseña debe coincidir con la anterior</p>
+          </div>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="formulario.invalid" [ngClass]="{'button-enabled': formulario.valid}">
+        Enviar
+      </button>
+  
+      <div *ngIf="mensajeEnviado">
+        <p class="send">¡El formulario ha sido enviado con éxito!</p>
+      </div>
+  
+    </form>
+  
+  </section>

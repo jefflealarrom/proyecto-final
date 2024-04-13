@@ -12,6 +12,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { ErrorComponent } from './components/error/error.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AboutComponent } from './components/about/about.component';
+import { ShowUserComponent } from './components/show-user/show-user.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'logOut', component: LogOutComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'checkout', component: CheckoutComponent},
+  { path: 'user', component:ShowUserComponent },
   { path: 'footer', component: AboutComponent },
   { path: '**', component: ErrorComponent },
  

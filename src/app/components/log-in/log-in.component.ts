@@ -1,5 +1,5 @@
 import { LoginService } from './../../services/login.service';
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,16 +8,16 @@ import { Router } from '@angular/router';
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.css']
 })
-export class LogInComponent  {
+export class LogInComponent implements OnInit {
 
-  formulario: FormGroup;
+  formulario!: FormGroup;
   mensajeError: string | null = null;
+  mensajeUser: string | null = null;
+  private fb = inject(FormBuilder)
+  private loginService = inject(LoginService)
+  private router = inject(Router)
 
-  constructor(
-    private fb: FormBuilder,
-    private loginService: LoginService,
-    private router: Router
-  ) {
+  ngOnInit(): void {
     this.formulario = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
@@ -25,23 +25,22 @@ export class LogInComponent  {
   }
 
   onSubmit(): void {
-    if (this.formulario.valid) {
-      const { email, password } = this.formulario.value;
-      this.loginService.getUser(email, password).subscribe({
-        next: (response: any) => { 
-          if (response.authenticated) {
-           
-            this.router.navigate(['/home']);
-          } else {
-          
-            this.mensajeError = 'Credenciales incorrectas.';
-          }
-        },
-        error: (error: any) => { 
-          console.error('Error al hacer login:', error);
-          this.mensajeError = 'Ocurrió un error al intentar hacer login.';
+    const { email, password } = this.formulario.value;
+    this.loginService.getUser(email, password).subscribe({
+      next: (response: any[]) => {
+        if (response.some(user => user.email === email && user.password === password)) {
+          this.router.navigate(['/user']);
+        } else {
+          this.mensajeError = null;
+          this.mensajeUser = 'Usuario o contraseña incorrectas.';
         }
-      });
-    }
+      },
+      error: (error: any) => {
+        console.error('Error al hacer login:', error);
+        this.mensajeUser = null; 
+        this.mensajeError = 'Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde.';
+      }
+    });
   }
+  
 }
