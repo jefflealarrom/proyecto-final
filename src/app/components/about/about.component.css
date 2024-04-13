@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    justify-content: space-around;
+    background-image:
+        linear-gradient(to top, #f80a6564 10%, transparent 100%);
+    align-items: center;
+}
+
+.rrss {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #f80a6564;
+}
+
+li {
+    font-size: small;
+    padding: 0.5rem;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #f80a6564;
+    border-radius: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 0.5;
+    color: #f80a6564;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+form input[type="email"]:focus {
+    border-color: #f80a65;
+    outline: none;
+}
+
+.form input::placeholder {
+    color: gray;
+}
+
+.form button {
+    width: 110%;
+    padding: 0.7rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #f80a6564;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 2rem;
+}
+
+.form button:hover {
+    background-color: #f80a6564;
+    border: none;
+    transform: scale(1.05);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-solid {
+    color: #f80a6564;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .form button {
+        margin-bottom: 1rem;
+    }
+
+    .container>.form {
+        order: -1;
+    }
+}

@@ -1,9 +1,11 @@
 <section *ngFor="let product of products">
+  <button class="home-button-all" routerLink="/home">↩︎</button>
   <div class="photo">
     <div class="image-container">
       <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
       <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
       <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
+      <button class="home-button" routerLink="/home">↩︎</button>
     </div>
     <div class="buttons">
       <button class="more" (click)="nextImage()">↾</button>
@@ -39,5 +41,6 @@
     </div>
   </div>
 </section>
+
 
 

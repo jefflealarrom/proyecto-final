@@ -2,6 +2,7 @@ header {
     width: 100vw;
     height: auto; 
     background-image: linear-gradient(to bottom, black 75%, transparent 100%);
+   
 
     figure {
         display: flex;
@@ -47,6 +48,7 @@ header {
     }
 
     .menu.active {
+        z-index: 1;
         display: flex;
         background-color: rgba(248, 10, 103, 0.8);
         width: 100vw;

@@ -1,0 +1,16 @@
+<section>
+  <h2>Gracias por tu compra</h2>
+  <h6>Tus productos comprados son:</h6>
+  <!-- <article *ngIf="purchasedProducts.length === 0" class="no-products">
+    No hay productos comprados
+  </article> -->
+  <article *ngFor="let product of purchasedProducts" class="product-item">
+    <img [src]="product.img_one" alt="{{ product.name }}" class="product-image">
+    <div class="product-details">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.brand }}</p>
+    </div>
+  </article>
+  <button class="yes" [routerLink]="['/home']">Volver a la tienda</button>
+
+</section>

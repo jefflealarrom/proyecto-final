@@ -1,7 +1,9 @@
+@import url('~@fortawesome/fontawesome-free/css/all.css');
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
