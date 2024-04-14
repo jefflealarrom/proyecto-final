@@ -25,33 +25,25 @@ export class RegistreComponent {
     });
   }
 
-
-
-
-
   onSubmit(): void {
     if (this.formulario.valid) {
-      const { email, password } = this.formulario.value;
-      this.loginService.getUser(email, password).subscribe({
+      const userData = this.formulario.value;
+      // Envía los datos del formulario a la API para agregar un nuevo usuario
+      this.loginService.addUser(userData).subscribe({
         next: (response: any) => {
           console.log('Respuesta de la API:', response);
-          if (response.id) {
-
-            this.router.navigate(['/home']);
-          } else {
-
-            this.mensajeError = 'Credenciales incorrectas.';
-          }
+          // Dependiendo de la respuesta de la API, puedes redirigir al usuario a otra página
+          this.router.navigate(['/home']);
         },
         error: (error: any) => {
-          console.error('Error al hacer login:', error);
-          this.mensajeError = 'Ocurrió un error al intentar hacer login.';
+          console.error('Error al agregar usuario:', error);
+          this.mensajeError = 'Ocurrió un error al intentar agregar el usuario.';
         }
       });
     }
   }
-  close(): void {
 
+  close(): void {
     this.router.navigate(['/blog']);
   }
 }

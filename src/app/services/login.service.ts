@@ -11,7 +11,7 @@ export class LoginService {
   private urlUser = 'https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/user';
   private http = inject(HttpClient)
 
-  getUser(email: string, password: string): Observable<any> {
+  validUser(email: string, password: string): Observable<any> {
     const params = new HttpParams().set('email', email).set('password', password);
     return this.http.get(this.urlUser, { params });
   }
@@ -30,9 +30,20 @@ export class LoginService {
   }
 
   updateUser(user: any): Observable<any> {
-    const userId = user.id; 
+    const userId = user.id;
     const url = `${this.urlUser}/${userId}`;
     return this.http.put(url, user);
+  }
+
+
+  addUser(userData: any): Observable<any> {
+    // Envía una solicitud HTTP POST con los datos del usuario
+    return this.http.post(this.urlUser, userData);
+  }
+
+  deleteUser(userId: string): Observable<any> {
+    const url = `${this.urlUser}/${userId}`;
+    return this.http.delete(url);
   }
 }
 
@@ -40,11 +51,6 @@ export class LoginService {
 
 
 
-
-
-// getUser(email: string, password: string): Observable<any> {
-//   const params = new HttpParams().set('email', email).set('password', password);
-//   return this.http.get(this.urlUser, { params });
 
 
 

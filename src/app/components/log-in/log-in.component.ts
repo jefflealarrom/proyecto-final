@@ -26,7 +26,7 @@ export class LogInComponent implements OnInit {
 
   onSubmit(): void {
     const { email, password } = this.formulario.value;
-    this.loginService.getUser(email, password).subscribe({
+    this.loginService.validUser(email, password).subscribe({
       next: (response: any[]) => {
         const user = response.find(u => u.email === email && u.password === password);
         if (user) {

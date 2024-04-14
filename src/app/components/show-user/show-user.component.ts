@@ -28,4 +28,21 @@ export class ShowUserComponent implements OnInit {
   loadCurrentUser(): void {
     this.currentUser = this.loginService.getCurrentUserFromLocalStorage();
   }
+  deleteUser(): void {
+    if (this.currentUser && this.currentUser.id) {
+      const userId = this.currentUser.id;
+      this.loginService.deleteUser(userId).subscribe({
+        next: (response: any) => {
+          console.log('Usuario eliminado:', response);
+          // Redirige al usuario a la página de inicio de sesión o a donde desees
+          this.router.navigate(['/logIn']);
+        },
+        error: (error: any) => {
+          console.error('Error al eliminar usuario:', error);
+          // Maneja el error de eliminación de usuario
+        }
+      });
+    }
+  }
+
 }
