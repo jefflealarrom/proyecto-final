@@ -19,10 +19,6 @@
                 <div *ngIf="formulario.get('password')?.errors?.['required']">
                     <p class="small">La contraseña es requerida</p>
                 </div>
-                <div *ngIf="formulario.get('password')?.errors?.['minlength']">
-                    <p class="small">La contraseña debe tener al menos 8
-                        caracteres</p>
-                </div>
             </div>
         </div>
         <button type="submit" [disabled]="!formulario.valid"

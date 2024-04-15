@@ -32,7 +32,6 @@ export class RegistreComponent {
       this.loginService.addUser(userData).subscribe({
         next: (response: any) => {
           console.log('Respuesta de la API:', response);
-          // Dependiendo de la respuesta de la API, puedes redirigir al usuario a otra página
           this.router.navigate(['/home']);
         },
         error: (error: any) => {

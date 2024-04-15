@@ -12,7 +12,7 @@ export class LogInComponent implements OnInit {
 
   formulario!: FormGroup;
   mensajeError: string | null = null;
-  mensajeUser: string | null = null;
+  mensajeUser: string | null = null; //prguntar a jose 
   private fb = inject(FormBuilder)
   private loginService = inject(LoginService)
   private router = inject(Router)
@@ -20,7 +20,7 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
+      password: ['', [Validators.required, /*Validators.minLength(8)*/]]
     });
   }
 
@@ -33,15 +33,17 @@ export class LogInComponent implements OnInit {
           this.loginService.setUserLocalStorage(user);
           this.router.navigate(['/user']);
         } else {
+          //no se esta metiendo por aqui va directo al error de la linea 45 
           this.mensajeError = null;
           this.mensajeUser = 'Usuario o contraseña incorrectas.';
+          console.log(this.mensajeUser)
         }
       },
-      error: (error: any) => {
-        console.error('Error al hacer login:', error);
-        this.mensajeUser = null; 
-        this.mensajeError = 'Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde.';
-      }
+      // error: (error: any) => {
+      //   console.error('Error al hacer login:', error);
+      //   this.mensajeUser = null; 
+      //   this.mensajeError = 'Error al hacer login';
+      // }
     });
   }
 }
