@@ -80,7 +80,7 @@
 }
   
   button[type="submit"]:hover {
-    background-color: magenta;
+    background-color: #f80a6564;
   }
   
   .send {

@@ -6,8 +6,8 @@ header {
 }
 
 img {
-    width: 25vw;
-    height: 15vw;
+    width: 20vw;
+    height: 10vw;
 }
 
 .flex {
@@ -41,7 +41,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #c78ba9; 
+    color: #f80a6564; 
    text-decoration: underline;
 }
 
@@ -72,7 +72,7 @@ ul li a:hover {
     .menu.active {
         z-index: 1;
         display: flex;
-        background-color: rgba(248, 10, 103, 0.8);
+        background-color: #f80a6564;
         width: 100vw;
         height: 85vh;
         top: 6.2rem;
@@ -107,7 +107,7 @@ ul li a:hover {
         display: block;
         width: 2rem;
         height: 0.2rem;
-        background-color: #F80A67;
+        background-color: #f80a6564;
         margin: 0.3rem auto;
         transition: all 0.3s ease-in-out;
     }
@@ -125,7 +125,7 @@ ul li a:hover {
     }
 
     li a:hover, li a:focus { 
-        color: white;
+        color: whitesmoke;
         text-decoration: underline; 
     }
 }

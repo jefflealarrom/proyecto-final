@@ -38,12 +38,14 @@
 } */
 .all{
     background-image: url("../../../assets/img/todas.webp");
-    width: 100%;
-    min-height: 600px;
+    width: 100vw;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #color{
     left: 43%;
@@ -51,34 +53,38 @@
 }
 .flex{
     display: flex;
+    width: 100vw;
 }
 .woman{
     background-image: url("../../../assets/img/fotowoomen.jpeg");
-    width: 100%;
-    min-height: 500px;
+    width: 50%;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;}
 .man{
     background-image: url("../../../assets/img/fotoman.webp");
-    width: 100%;
-    min-height: 500px;
+    width: 50%;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .position{
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    color: black;
+     color: black;
     font-size:25px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
 }
 .position:hover{
-    color: #c78ba9; 
+    color: #f80a6564; 
     text-decoration: underline;
 }
 .flex-grid{
@@ -119,7 +125,7 @@ img {
 
 .price {
     font-size: 3rem;
-    color: #F80A67;
+    color: #f80a6564;
 }
 
 button {
@@ -137,6 +143,18 @@ button {
 
 
 button:hover {
-    background-color: #F80A67; 
+    background-color: #f80a6564; 
 }
-
+@media screen and (max-width: 600px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+   .woman{
+    width: 100%;
+   }
+   .man{
+    width: 100%;
+   }
+}

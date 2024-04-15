@@ -52,7 +52,7 @@ form input[type="email"] {
 }
 
 form input[type="email"]:focus {
-    border-color: #f80a65;
+    border-color: #f80a6564;
     outline: none;
 }
 

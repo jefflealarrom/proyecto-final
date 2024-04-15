@@ -38,7 +38,7 @@ input[type="password"] {
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #f80a65;
+    border-color: #f80a6564;
     outline: none;
 }
 
