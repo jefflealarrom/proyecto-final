@@ -2,6 +2,7 @@ import { LoginService } from './../../services/login.service';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user.“interface”';
 
 @Component({
   selector: 'app-log-in',
@@ -20,32 +21,27 @@ export class LogInComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, /*Validators.minLength(8)*/]]
+      password: ['', [Validators.required,]]
     });
   }
-
+  
   onSubmit(): void {
     const { email, password } = this.formulario.value;
     this.loginService.validUser(email, password).subscribe({
-      next: (response: any[]) => {
-        console.log(response)
-        const user = response.find(u => u.email === email && u.password === password);
-        // console.log(user, 'hola')
+      next: (users: User[]) => { 
+        const user = users.find(u => u.email === email && u.password === password);
         if (user) {
           this.loginService.setUserLocalStorage(user);
           this.router.navigate(['/user']);
         } else {
-          //no se esta metiendo por aqui va directo al error de la linea 45 
-          this.mensajeError = null;
-          this.mensajeUser = 'Usuario o contraseña incorrectas.';
-          console.log(this.mensajeUser)
+          this.mensajeError = 'Usuario o contraseña incorrectas.';
+          console.log('usuario');
         }
       },
-      // error: (error: any) => {
-      //   console.error('Error al hacer login:', error);
-      //   this.mensajeUser = null; 
-      //   this.mensajeError = 'Error al hacer login';
-      // }
+      error: (error: any) => {
+        console.error('Error al hacer login:', error);
+        this.mensajeError = 'Error al hacer login';
+      }
     });
   }
 }

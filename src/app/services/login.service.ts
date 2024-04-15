@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
+import { User } from '../interfaces/user.“interface”';
 
 
 @Injectable({
@@ -12,18 +13,21 @@ export class LoginService {
   private http = inject(HttpClient)
   
 
-  //preguntar a jose por Observable<any> si cambiar any por interfaz. crear una nueva interfaz(?) o con crear una nueva variable y asignarle la interfez me bastaria
-  validUser(email: string, password: string): Observable<any> {
+  validUser(email: string, password: string): Observable<User[]> {  
     const params = new HttpParams().set('email', email).set('password', password);
-    console.log(this.http.get(this.urlUser, { params }))
-    return this.http.get(this.urlUser, { params });
+    return this.http.get<User[]>(this.urlUser, { params });
   }
-//pregungtar a jose lo mismo con el any y si necesito cambiarlo para manejar la funcion con un boolean y no con un boolean (nuevo servicio?)
-  setUserLocalStorage(user: any): void {
-    localStorage.setItem('currentUser', JSON.stringify(user));
+
+  setUserLocalStorage(user: User | null): void {
+    if (user) {
+      localStorage.setItem('currentUser', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('currentUser');
+    }
   }
-//lo mismo con el any aunque como los datos puedeb variar, (otra vez hace falta interfaz?)
-  getCurrentUserFromLocalStorage(): any {
+  
+
+  getCurrentUserFromLocalStorage(): User | null {
     const userString = localStorage.getItem('currentUser');
     return userString ? JSON.parse(userString) : null;
   }
@@ -31,33 +35,31 @@ export class LoginService {
   logout(): void {
     localStorage.removeItem('currentUser');
   }
-//recojemos el id del usuario para actualizacion de los datos y cambiamos en el front en tiempo real 
-  updateUser(user: any): Observable<any> {
+
+  updateUser(user: User): Observable<User> {
     const userId = user.id;
     const url = `${this.urlUser}/${userId}`;
-    return this.http.put(url, user).pipe(
-      tap((updatedUser: any) => {
+    return this.http.put<User>(url, user).pipe(
+      tap((updatedUser: User) => {
         this.setUserLocalStorage(updatedUser);
       })
     );
   }
-//agregr usario
-  addUser(userData: any): Observable<any> {
-    return this.http.post(this.urlUser, userData).pipe(
-      tap((newUser: any) => {
+
+  addUser(userData: User): Observable<User> {
+    return this.http.post<User>(this.urlUser, userData).pipe(
+      tap((newUser: User) => {
         this.setUserLocalStorage(newUser);
       })
     );
   }
 
-  deleteUser(userId: string): Observable<any> {
+  deleteUser(userId: string): Observable<User> {
     const url = `${this.urlUser}/${userId}`;
-    return this.http.delete(url).pipe(
+    return this.http.delete<User>(url).pipe(
       tap(() => {
-        this.setUserLocalStorage(null); 
+        this.setUserLocalStorage(null);
       })
     );
   }
 }
-
-//usar el objeto localStorage para acceder siemre al almacenamiento interno de la web y poder manejar los datos, es necesaria para guardar, recuperar o eliminar datos 
