@@ -88,7 +88,7 @@ h6 {
 
 #price {
     font-size: 4rem;
-    color: #F80A67;
+    color: #f80a6564;
     height: 2rem;
 }
 
@@ -104,8 +104,8 @@ h6 {
 }
 
 .info button:hover {
-    color: #F80A67;
-    border-color: #F80A67;
+    color: #f80a6564;
+    border-color: #f80a6564;
 }
 
 select {
@@ -157,7 +157,7 @@ select {
         font-size: 2rem;
         display: flex;
         justify-content: center;
-        color: #F80A67;
+        color: #f80a6564;
         padding-bottom: 0.5rem;
     }
 

@@ -2,21 +2,22 @@ header {
     width: 100vw;
     height: auto; 
 
-    background-image: linear-gradient(to bottom, #f80a6564 75%, transparent 100%);
-
-    background-image: linear-gradient(to bottom, black 75%, transparent 100%);
-   
+    background-image: linear-gradient(to bottom, #f80a6564 10%, transparent 100%);
 
     figure {
         display: flex;
         justify-content: center;
-
+    }
+    img{
+        width: 20%;
+        
     }
 
     ul {
         display: flex;
         justify-content: center;
-        padding-bottom: 50px; 
+        padding: 50px; 
+       
 
         a {
             color: black;
@@ -26,7 +27,7 @@ header {
     
 
     ul li a:hover {
-        color: #F80A67;
+        color: #f80a6564;
         text-decoration: underline;
     }
 }
@@ -34,7 +35,10 @@ header {
 .hamburger {
     display: none;
 }
-
+.menu{
+    display: flex;
+    align-items: center;
+}
 @media screen and (max-width: 900px) {
     header {
         display: flex;
@@ -53,7 +57,7 @@ header {
     .menu.active {
         z-index: 1;
         display: flex;
-        background-color: rgba(248, 10, 103, 0.8);
+        background-color: #f80a6564;
         width: 100vw;
         height: 85vh;
         top: 6.2rem;
@@ -89,7 +93,7 @@ header {
         display: block;
         width: 2rem;
         height: 0.2rem;
-        background-color: #F80A67;
+        background-color: #f80a6564;
         margin: 0.3rem auto;
         transition: all 0.3s ease-in-out;
        

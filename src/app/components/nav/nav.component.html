@@ -5,13 +5,18 @@
         <span class="bar"></span>
     </button>
 
-    <figure>
+    <!-- <figure>
         <a [routerLink]="['/home']">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Perfume_Single_Logo.png/1200px-Perfume_Single_Logo.png" alt="logo-perfume">
+            <img src="../../../assets/img/Perfume_Single_Logo.png" alt="logo-perfume">
         </a>
-    </figure>
+    </figure> -->
 
     <div class="menu" [class.active]="menuOpen">
+        <figure>
+            <a [routerLink]="['/home']">
+                <img src="../../../assets/img/Perfume_Single_Logo.png" alt="logo-perfume">
+            </a>
+        </figure>
         <ul>
             <li><a class="link" [routerLink]="['/home']" (click)="toggleMenu()">Home</a></li>
             <li><a class="link" [routerLink]="['/allProducts']" (click)="toggleMenu()">Fragancias</a></li>
@@ -23,6 +28,7 @@
             <li><a class="link" [routerLink]="['/shop']" (click)="toggleMenu()">Carrito</a></li>
         </ul>
     </div>
+
 </header>
 <main>
     <router-outlet></router-outlet>
