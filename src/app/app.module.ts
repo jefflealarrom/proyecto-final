@@ -19,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'primeng/carousel';
+
 
 
 
@@ -47,6 +51,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    CarouselModule,
     
   
   ],

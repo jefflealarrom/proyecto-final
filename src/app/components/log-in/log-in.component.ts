@@ -1,7 +1,9 @@
 import { LoginService } from './../../services/login.service';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegistreComponent } from '../registre/registre.component';
+import { RegistreService } from 'src/app/services/registre.service';
 
 @Component({
   selector: 'app-log-in',
@@ -9,6 +11,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent  {
+
+  LoginService = inject(LoginService);
+
+  async getLogin(loginform: any){
+    const response = await this.loginService.login(loginform.value)
+  }
 
   formulario: FormGroup;
   mensajeError: string | null = null;

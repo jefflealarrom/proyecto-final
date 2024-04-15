@@ -15,6 +15,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: '', pathMatch: 'full', redirectTo:'login'},
   { path: 'home', component: HomeComponent },
   { path: 'allProducts', component: AllProductsComponent },
   { path: 'detail/:id', component: DetailsComponent },

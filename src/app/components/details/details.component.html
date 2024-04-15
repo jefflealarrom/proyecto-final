@@ -1,10 +1,17 @@
 <section *ngFor="let product of products">
   <div class="photo">
     <div class="image-container">
+      
+        
       <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
       <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
       <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
+      
+    
     </div>
+  
+
+
     <div class="buttons">
       <button class="more" (click)="nextImage()">↾</button>
       <button class="less" (click)="prevImage()">⇂</button>

@@ -3,6 +3,8 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute,  } from '@angular/router';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
 import { AllProductosService } from 'src/app/services/all-productos.service';
+import { CarouselModule } from 'primeng/carousel';
+import { PrimeNGConfig } from 'primeng/api';
 
 
 @Component({
@@ -10,6 +12,8 @@ import { AllProductosService } from 'src/app/services/all-productos.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
+
+
 export class DetailsComponent {
 
   products: Products [] = [];

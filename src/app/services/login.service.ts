@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, firstValueFrom } from 'rxjs';
 
 
 @Injectable({
@@ -15,4 +15,10 @@ export class LoginService {
   getUser(email: string, password: string): Observable<any> {
     return this.http.post(this.urlUser, { email, password });
   }
+
+  login(user: any): Promise<any>
+   return firstValueFrom(
+    this.http.post<any>({this.urlUser}/login, user)
+   )
+
 }
