@@ -1,31 +1,53 @@
 header {
     width: 100vw;
+    height: 30vw;
     height: auto; 
-    background-image: linear-gradient(to bottom, black 75%, transparent 100%);
-   
+    background-color:  white;
+}
 
-    figure {
-        display: flex;
-        justify-content: center;
+img {
+    width: 25vw;
+    height: 15vw;
+}
 
-    }
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 13vw;
+}
 
-    ul {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 50px; 
+.menu {
+    width: 70%;
+}
 
-        a {
-            color: black;
-            padding: 1rem;
-        }
-    }
+.menu a {
     
+    border-radius: 1vw;
+    margin-right: 1vw;
+}
 
-    ul li a:hover {
-        color: #F80A67;
-        text-decoration: underline;
-    }
+ul {
+    display: flex;
+    justify-content: center;
+   
+}
+
+ul li a {
+    color: black;
+    padding: 1rem;
+   
+}
+
+ul li a:hover {
+    color: #c78ba9; 
+   text-decoration: underline;
+}
+
+
+.menu {
+    color: whitesmoke;
 }
 
 .hamburger {
@@ -64,15 +86,14 @@ header {
     ul {
         flex-direction: column;
     }
-    li { 
 
+    li { 
         margin-bottom: 1.5rem;
     }
 
-
     li a {
-      color: black;
-      font-size: 1.4rem;
+        color: black;
+        font-size: 1.4rem;
     }
 
     .hamburger {
@@ -89,7 +110,6 @@ header {
         background-color: #F80A67;
         margin: 0.3rem auto;
         transition: all 0.3s ease-in-out;
-       
     }
 
     .open .bar:nth-child(1) {

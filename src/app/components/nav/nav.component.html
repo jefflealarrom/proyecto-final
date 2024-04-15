@@ -4,13 +4,19 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </button>
+    <div class="flex">
     <figure>
         <a [routerLink]="['/home']">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Perfume_Single_Logo.png/1200px-Perfume_Single_Logo.png"
-                alt="logo-perfume">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2022/02/15/Logo-perfume-Bottle-with-perfume-Graphics-25252667-1-580x386.png" alt="logoperfume">
         </a>
-    </figure>
+    </figure> 
+
     <div class="menu" [class.active]="menuOpen">
+        <!-- <figure>
+            <a [routerLink]="['/home']">
+                <img src="../../../assets/img/Perfume_Single_Logo.png" alt="logo-perfume">
+            </a>
+        </figure> -->
         <ul>
             <li><a class="link" [routerLink]="['/home']" (click)="toggleMenu()">Home</a></li>
             <li><a class="link" [routerLink]="['/allProducts']" (click)="toggleMenu()">Fragancias</a></li>
@@ -22,6 +28,7 @@
             <li><a class="link" [routerLink]="['/shop']" (click)="toggleMenu()">Carrito</a></li>
         </ul>
     </div>
+</div>
 </header>
 <main>
     <router-outlet></router-outlet>
