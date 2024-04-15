@@ -15,6 +15,7 @@ export class LoginService {
   //preguntar a jose por Observable<any> si cambiar any por interfaz. crear una nueva interfaz(?) o con crear una nueva variable y asignarle la interfez me bastaria
   validUser(email: string, password: string): Observable<any> {
     const params = new HttpParams().set('email', email).set('password', password);
+    console.log(this.http.get(this.urlUser, { params }))
     return this.http.get(this.urlUser, { params });
   }
 //pregungtar a jose lo mismo con el any y si necesito cambiarlo para manejar la funcion con un boolean y no con un boolean (nuevo servicio?)

@@ -28,7 +28,9 @@ export class LogInComponent implements OnInit {
     const { email, password } = this.formulario.value;
     this.loginService.validUser(email, password).subscribe({
       next: (response: any[]) => {
+        console.log(response)
         const user = response.find(u => u.email === email && u.password === password);
+        // console.log(user, 'hola')
         if (user) {
           this.loginService.setUserLocalStorage(user);
           this.router.navigate(['/user']);

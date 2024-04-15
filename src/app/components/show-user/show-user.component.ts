@@ -16,10 +16,12 @@ export class ShowUserComponent implements OnInit {
     this.loadCurrentUser();
   }
 
-  logout(): void {
-    this.loginService.logout();
-    this.router.navigate(['/logIn']); 
-  }
+  // logout(): void {
+  //   this.loginService.logout();
+  //   this.router.navigate(['/logIn']); 
+
+  //   //mover la funcion al componente logout?
+  // }
 
   editUser(): void {
     this.router.navigate(['/edit-user']); 
