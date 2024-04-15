@@ -25,7 +25,7 @@ h2 {
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 0.7rem 0;
+    padding: 0.7rem;
     margin-bottom: 0.5rem;
     border: 1px solid #f80a6564;
     border-radius: 1rem;
@@ -70,8 +70,9 @@ button[type="submit"]:enabled {
 }
 
 button[type="submit"]:hover {
-    border: none;
     background-color: #f80a6564;
+    border: none;
+    transform: scale(1.05);
 }
 
 
