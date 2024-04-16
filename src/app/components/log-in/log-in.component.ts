@@ -38,7 +38,7 @@ export class LogInComponent implements OnInit {
           console.log('usuario');
         }
       },
-      error: (error: any) => {
+      error: (error: User) => {
         console.error('Error al hacer login:', error);
         this.mensajeError = 'Error al hacer login';
       }

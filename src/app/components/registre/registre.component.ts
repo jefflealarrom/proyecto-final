@@ -35,7 +35,7 @@ export class RegistreComponent {
           console.log('Respuesta de la API:', response);
           this.router.navigate(['/home']);
         },
-        error: (error: any) => {
+        error: (error: User) => {
           console.error('Error al agregar usuario:', error);
           this.mensajeError = 'Ocurrió un error al intentar agregar el usuario.';
         }

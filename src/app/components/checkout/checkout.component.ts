@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Products } from 'src/app/interfaces/products.—type=“interface”';
 
 @Component({
   selector: 'app-checkout',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
   
-  purchasedProducts: any[] = [];
+  purchasedProducts: Products[] = [];
   route = inject(ActivatedRoute)
 
   ngOnInit(): void {

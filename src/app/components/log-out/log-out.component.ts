@@ -15,8 +15,6 @@ router = inject(Router)
   logout(): void {
     this.loginService.logout();
     this.router.navigate(['/logIn']); 
-
-    //mover la funcion al componente logout?
   }
 
 }

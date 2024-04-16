@@ -32,7 +32,7 @@ img {
 
 .price {
     font-size: 3rem;
-    color: #F80A67;
+    color: #f80a6564;
 }
 
 p {
@@ -41,7 +41,7 @@ p {
 }
 
 h5 {
-    color: #F80A67;
+    color: #f80a6564;
 }
 
 button {
@@ -58,11 +58,11 @@ button {
 }
 
 .no:hover {
-    background-color: #F80A67;
+    background-color: #f80a6564;
 }
 
 .yes:hover {
-    background-color: chartreuse;
+    background-color: #f80a6564;
 }
 
 .total {
@@ -83,7 +83,7 @@ button {
     flex-direction: column;
 }
 #total {
-    color: #F80A67;
+    color: #f80a6564;
     padding: 0;
     font-size: 3rem;
     

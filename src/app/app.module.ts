@@ -21,6 +21,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AboutComponent } from "../app/components/about/about.component";
 import { ShowUserComponent } from './components/show-user/show-user.component';
 import { EdisUserComponent } from './components/edis-user/edis-user.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
 
 
 
@@ -47,6 +48,7 @@ import { EdisUserComponent } from './components/edis-user/edis-user.component';
     AboutComponent,
     ShowUserComponent,
     EdisUserComponent,
+    BestSellerComponent,
 
   ],
   imports: [

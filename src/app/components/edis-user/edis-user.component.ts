@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user.“interface”';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -8,15 +9,20 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./edis-user.component.css']
 })
 export class EdisUserComponent implements OnInit {
-  currentUser: any;
+  currentUser!: User;
   selectedImage: File | null = null;
   private loginService = inject(LoginService)
   private router = inject(Router)
 
   ngOnInit(): void {
-    this.currentUser = this.loginService.getCurrentUserFromLocalStorage();
+    const userFromLocalStorage = this.loginService.getCurrentUserFromLocalStorage();
+    if (userFromLocalStorage) {
+      this.currentUser = userFromLocalStorage;
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
-
+  
   saveChanges(): void {
     this.loginService.updateUser(this.currentUser).subscribe({
       next: () => {

@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { LoginService } from './../../services/login.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user.“interface”';
 
 @Component({
   selector: 'app-show-user',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./show-user.component.css']
 })
 export class ShowUserComponent implements OnInit {
-  currentUser: any;
+  currentUser!: User;
   private loginService = inject(LoginService)
   private router = inject(Router)
 
@@ -28,17 +29,23 @@ export class ShowUserComponent implements OnInit {
   }
 
   loadCurrentUser(): void {
-    this.currentUser = this.loginService.getCurrentUserFromLocalStorage();
+    const userFromLocalStorage = this.loginService.getCurrentUserFromLocalStorage();
+    if (userFromLocalStorage) {
+      this.currentUser = userFromLocalStorage;
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
+  
   deleteUser(): void {
     if (this.currentUser && this.currentUser.id) {
       const userId = this.currentUser.id;
       this.loginService.deleteUser(userId).subscribe({
-        next: (response: any) => {
+        next: (response: User) => {
           console.log('Usuario eliminado:', response);
           this.router.navigate(['/logIn']);
         },
-        error: (error: any) => {
+        error: (error: User) => {
           console.error('Error al eliminar usuario:', error);
         }
       });
