@@ -1,9 +1,8 @@
 .containerProduct {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: auto;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 2rem;
+    margin: 4rem;
 }
 
 .cardProduct {
@@ -14,7 +13,6 @@
     background-color: whitesmoke;
     border-radius: 1rem;
 }
-
 
 img {
     width: 100%;

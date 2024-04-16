@@ -24,6 +24,7 @@
       "price": "65,99",
       "gender": "Female",
       "brand": "Marc jacobs",
+      "top": true,
       "id": "1"
     },
     {
@@ -36,6 +37,7 @@
       "price": "95,95",
       "gender": "Female",
       "brand": "Carolina Herrera",
+      "top": false,
       "id": "2"
     },
     {
@@ -48,6 +50,7 @@
       "price": "89,47",
       "gender": "Female",
       "brand": "Prada",
+      "top": true,
       "id": "3"
     },
     {
@@ -60,6 +63,7 @@
       "price": "84,59",
       "gender": "Female",
       "brand": "Valentino",
+      "top": false,
       "id": "4"
     },
     {
@@ -72,6 +76,7 @@
       "price": "99,97",
       "gender": "Female",
       "brand": "Lancôme",
+      "top": false,
       "id": "5"
     },
     {
@@ -84,6 +89,7 @@
       "price": "26,80",
       "gender": "Female",
       "brand": "Calvin Klein",
+      "top": false,
       "id": "6"
     },
     {
@@ -96,6 +102,7 @@
       "price": "76,71",
       "gender": "Female",
       "brand": "Yves Saint Laurent",
+      "top": false,
       "id": "7"
     },
     {
@@ -108,6 +115,7 @@
       "price": "42,70",
       "gender": "Female",
       "brand": "Escada",
+      "top": false,
       "id": "8"
     },
     {
@@ -118,8 +126,9 @@
       "img_three": "https://i1.perfumesclub.com/grandewp/126772-3.webp",
       "info": "Descubre el perfume de mujer de Giorgio Armani, My Way, en formato recargable. My Way es el aroma de los descubrimientos y las conexiones para una mujer de mente abierta, curiosa y auténtica, dispuesta a ampliar sus horizontes y vivir encuentros y experiencias especiales en todo el mundo. Este lujoso perfume se puede recargar en casa gracias a su frasco recargable. El recambio de My Way Eau de Parfum presenta un diseño innovador, que permite recargar el frasco vaporizador sin perder ni una sola gota de la fragancia. Cada formato de MY WAY (30, 50 o 90 ml) está diseñado para que se pueda desenroscar y recargar en casa con el mismo frasco de recambio. El recambio de MY WAY es un frasco de 150 ml que se vende en un estuche. Un perfume con un propósito: Desde los ingredientes de origen consciente hasta su frasco recargable en todos los formatos, un compromiso responsable para luchar contra el cambio climático.",
       "price": "78,31",
-      "gender": "Felame",
+      "gender": "Female",
       "brand": "Giorgio armani",
+      "top": false,
       "id": "9"
     },
     {
@@ -132,6 +141,7 @@
       "price": "54,57",
       "gender": "Female",
       "brand": "Jean Paul Gaultier",
+      "top": false,
       "id": "10"
     },
     {
@@ -144,6 +154,7 @@
       "price": "48,79",
       "gender": "Male",
       "brand": "Calvin Klein",
+      "top": true,
       "id": "11"
     },
     {
@@ -156,6 +167,7 @@
       "price": "28,62",
       "gender": "Male",
       "brand": "Davidoff",
+      "top": false,
       "id": "12"
     },
     {
@@ -168,6 +180,7 @@
       "price": "64,07",
       "gender": "Male",
       "brand": "Givenchi",
+      "top": true,
       "id": "13"
     },
     {
@@ -180,6 +193,7 @@
       "price": "65,78",
       "gender": "Male",
       "brand": "Giorgio Armani",
+      "top": false,
       "id": "14"
     },
     {
@@ -192,6 +206,7 @@
       "price": "71,47",
       "gender": "Male",
       "brand": "Valentino",
+      "top": false,
       "id": "15"
     },
     {
@@ -204,6 +219,7 @@
       "price": "79,94",
       "gender": "Male",
       "brand": "Paco Rabanne",
+      "top": false,
       "id": "16"
     },
     {
@@ -216,6 +232,7 @@
       "price": "66,36",
       "gender": "Male",
       "brand": "Hugo Boss",
+      "top": false,
       "id": "17"
     },
     {
@@ -228,6 +245,7 @@
       "price": "62,46",
       "gender": "Male",
       "brand": "Yves Saint Laurent",
+      "top": false,
       "id": "18"
     },
     {
@@ -240,6 +258,7 @@
       "price": "104,94",
       "gender": "Male",
       "brand": "LOEWE",
+      "top": false,
       "id": "19"
     },
     {
@@ -252,6 +271,7 @@
       "price": "71,95",
       "gender": "Male",
       "brand": "Paco Rabanne",
+      "top": false,
       "id": "20"
     }
   ]
