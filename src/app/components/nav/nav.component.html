@@ -4,13 +4,12 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </button>
-
     <figure>
         <a [routerLink]="['/home']">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Perfume_Single_Logo.png/1200px-Perfume_Single_Logo.png" alt="logo-perfume">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Perfume_Single_Logo.png/1200px-Perfume_Single_Logo.png"
+                alt="logo-perfume">
         </a>
     </figure>
-
     <div class="menu" [class.active]="menuOpen">
         <ul>
             <li><a class="link" [routerLink]="['/home']" (click)="toggleMenu()">Home</a></li>

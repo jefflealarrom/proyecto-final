@@ -1,42 +1,52 @@
 h2 {
     text-align: center;
     padding-bottom: 2rem;
-    background-color: tomato;
 }
 
 .formularios {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    animation: backgroundAnimation 5s linear infinite alternate;
+    height: 100vh;
 }
 
 .formularios form {
-    width: 30rem;
+    width: 30%;
     padding: 5rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+
 }
 
 .form-group {
-    position: relative;
     margin-bottom: 2rem;
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid black;
-    background-color: whitesmoke;
-    color: black;
-    border-radius: 5px;
+    padding: 0.7rem 0;
+    margin-bottom: 0.5rem;
+    border: 1px solid #f80a6564;
+    border-radius: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 0.5;
+    color: #f80a6564;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #f80a65;
+    outline: none;
 }
 
 input::placeholder {
     color: black;
     font-style: italic;
+    display: flex;
+    text-align: center;
 }
 
 .small {
@@ -44,34 +54,47 @@ input::placeholder {
 }
 
 button[type="submit"] {
-    padding: 10px;
-    color: black;
-    border-radius: 5px;
+    width: 100%;
+    padding: 0.7rem;
     border: none;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    color: black;
+    background-color: transparent;
     cursor: pointer;
-
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.button-enabled {
-    background-color: cyan;
+button[type="submit"]:enabled {
+    background-color: #4CAF50;
 }
-
 
 button[type="submit"]:hover {
-    background-color: magenta;
+    border: none;
+    background-color: #f80a6564;
 }
 
-
-.bi {
-    float: right;
-    cursor: pointer;
-
-}
 
 .send {
-    text-align: center;
-    text-align: center;
-    font-size: 30px;
-    color: chartreuse;
-    font-style: italic;
+    position: absolute;
+    color: black;
+    margin-top: 1rem;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+            color: #f80a6564;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .formularios form {
+        width: 100%;
+    }
+
 }

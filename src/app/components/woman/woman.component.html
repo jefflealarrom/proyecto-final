@@ -1,9 +1,6 @@
 <section class="containerProduct">
   <article *ngFor="let product of products" class="cardProduct">
     <img [src]="product.img_one" alt="{{ product.name }}">
-
-
-
     <div class="info">
       <div>
         <h3>{{ product.name }}</h3>
@@ -14,5 +11,4 @@
     </div>
     <button [routerLink]="['/detail', product.id]">Ver Producto</button>
   </article>
-  
 </section>

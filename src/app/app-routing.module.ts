@@ -10,8 +10,11 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ErrorComponent } from './components/error/error.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AboutComponent } from './components/about/about.component';
+import { ShowUserComponent } from './components/show-user/show-user.component';
+import { EdisUserComponent } from './components/edis-user/edis-user.component';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -27,8 +30,11 @@ const routes: Routes = [
   { path: 'logOut', component: LogOutComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'checkout', component: CheckoutComponent},
-  { path: 'footer', component: FooterComponent },
+  { path: 'user', component:ShowUserComponent },
+  { path: 'edit-user', component: EdisUserComponent },
+  { path: 'footer', component: AboutComponent },
   { path: '**', component: ErrorComponent },
+ 
 
 
 ];
@@ -36,6 +42,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 
 export class AppRoutingModule { }

@@ -14,9 +14,8 @@ export class LogInComponent  {
 
   LoginService = inject(LoginService);
 
-  async getLogin(loginform: any){
-    const response = await this.loginService.login(loginform.value)
-  }
+  
+  
 
   formulario: FormGroup;
   mensajeError: string | null = null;

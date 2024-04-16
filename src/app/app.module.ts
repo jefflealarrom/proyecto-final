@@ -11,7 +11,6 @@ import { RegistreComponent } from './components/registre/registre.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -22,6 +21,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'primeng/carousel';
+
 
 
 
@@ -39,10 +39,14 @@ import { CarouselModule } from 'primeng/carousel';
     LogInComponent,
     LogOutComponent,
     HomeComponent,
-    FooterComponent,
     ErrorComponent,
     DetailsComponent,
     CheckoutComponent,
+    AboutComponent,
+    ShowUserComponent,
+    EdisUserComponent,
+  
+
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,7 @@ import { CarouselModule } from 'primeng/carousel';
     BrowserAnimationsModule,
     ButtonModule,
     CarouselModule,
+    
     
   
   ],
