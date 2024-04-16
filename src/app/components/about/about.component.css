@@ -56,14 +56,11 @@ form input[type="email"]:focus {
     outline: none;
 }
 
-.form input::placeholder {
-    color: gray;
-}
 
 .form button {
     width: 110%;
     padding: 0.7rem;
-    color: white;
+    color: black;
     background-color: transparent;
     border: none;
     border-radius: 0.5rem;

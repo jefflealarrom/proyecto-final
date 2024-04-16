@@ -14,6 +14,7 @@ export class ShopComponent implements OnInit {
   total: number = 0;
   shopService = inject(ShopService)
   router = inject(Router)
+  
 
   ngOnInit(): void {
     this.loadCartItems();

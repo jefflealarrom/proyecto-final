@@ -4,19 +4,15 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </button>
-    <div class="flex">
     <figure>
         <a [routerLink]="['/home']">
-            <img src="https://www.creativefabrica.com/wp-content/uploads/2022/02/15/Logo-perfume-Bottle-with-perfume-Graphics-25252667-1-580x386.png" alt="logoperfume">
+            <!-- <img src="https://www.creativefabrica.com/wp-content/uploads/2022/02/15/Logo-perfume-Bottle-with-perfume-Graphics-25252667-1-580x386.png" alt="logoperfume"> -->
+
+            <img src="../../../assets/img/—Pngtree—cartoon beauty decorative perfume_4517068.png">
+
         </a>
     </figure> 
-
-    <div class="menu" [class.active]="menuOpen">
-        <!-- <figure>
-            <a [routerLink]="['/home']">
-                <img src="../../../assets/img/Perfume_Single_Logo.png" alt="logo-perfume">
-            </a>
-        </figure> -->
+    <article class="menu" [class.active]="menuOpen">
         <ul>
             <li><a class="link" [routerLink]="['/home']" (click)="toggleMenu()">Home</a></li>
             <li><a class="link" [routerLink]="['/allProducts']" (click)="toggleMenu()">Fragancias</a></li>
@@ -27,8 +23,7 @@
             <li><a class="link" [routerLink]="['/logOut']" (click)="toggleMenu()">Log Out</a></li>
             <li><a class="link" [routerLink]="['/shop']" (click)="toggleMenu()"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
-    </div>
-</div>
+    </article>
 </header>
 <main>
     <router-outlet></router-outlet>

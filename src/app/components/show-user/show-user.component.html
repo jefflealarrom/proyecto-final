@@ -1,12 +1,11 @@
-<div *ngIf="currentUser">
+<section *ngIf="currentUser">
     <img src="{{currentUser.image }}" alt="Avatar de usuario">
     <h2>Hello {{ currentUser.name }} {{ currentUser.lastname }}!!</h2>
     <p>Tu correo es: {{ currentUser.email }}</p>
     <p>y tu contraseña es {{ currentUser.password }}</p>
     <button (click)="editUser()">Editar datos</button>
-    <button (click)="logout()">Cerrar sesión</button>
+    <!-- <button (click)="logout()">Cerrar sesión</button> -->
     <button (click)="deleteUser()">Eliminar usuario</button>
-
-  </div>
+  </section>
   <p *ngIf="!currentUser">No se ha iniciado sesión.</p>
   
