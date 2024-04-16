@@ -1,5 +1,9 @@
-<section *ngFor="let product of products">
+<section class="container" *ngFor="let product of products">
   <button class="home-button-all" routerLink="/home">↩︎</button>
+  
+  
+  
+  
   <article class="photo">
     <section class="image-container">
       <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
@@ -12,6 +16,11 @@
       <button class="less" (click)="prevImage()">⇂</button>
     </section>
   </article>
+
+
+
+
+
   <article class="text">
     <section class="info">
       <h3>{{ product.name }}</h3>

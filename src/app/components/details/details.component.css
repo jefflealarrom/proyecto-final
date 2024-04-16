@@ -12,8 +12,8 @@
     display: none;
 }
 
-section {
-    height: 100vh;
+.container {
+    height: auto;
     width: 100vw;
     display: flex;
 }
