@@ -1,0 +1,27 @@
+section {
+    height: 70vh;
+    width: 100vw;
+    background-image: url('https://i0.wp.com/www.silocreativo.com/wp-content/uploads/2017/11/diseno-web-404-CSS.gif?resize=600%2C323&quality=100&strip=all&ssl=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.btn-home {
+    padding: 0.7rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #f80a6564;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 2rem;
+}
+
+.btn-home:hover {
+    background-color: #f80a6564;
+}
+
