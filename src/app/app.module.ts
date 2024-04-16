@@ -18,9 +18,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+<<<<<<< HEAD
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'primeng/carousel';
+=======
+import { AboutComponent } from "../app/components/about/about.component";
+import { ShowUserComponent } from './components/show-user/show-user.component';
+import { EdisUserComponent } from './components/edis-user/edis-user.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
+
+
+>>>>>>> 2c47b388c5561560c5d699254d87e0f74e8eee00
 
 
 
@@ -45,7 +54,11 @@ import { CarouselModule } from 'primeng/carousel';
     AboutComponent,
     ShowUserComponent,
     EdisUserComponent,
+<<<<<<< HEAD
   
+=======
+    BestSellerComponent,
+>>>>>>> 2c47b388c5561560c5d699254d87e0f74e8eee00
 
   ],
   imports: [

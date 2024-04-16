@@ -12,5 +12,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 >>>>>>> 21f1d314fc55c8dfc8bf20ab0cd43ca18a5c90cf
 }
+<<<<<<< HEAD
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+=======
+main {
+    padding-top: 10vw;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        padding-top: 15vh;
+    }
+}
+>>>>>>> 2c47b388c5561560c5d699254d87e0f74e8eee00

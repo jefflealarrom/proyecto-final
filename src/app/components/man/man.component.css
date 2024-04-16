@@ -1,9 +1,8 @@
 .containerProduct {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    height: auto;
     justify-content: center;
+    align-items: center;
 }
 
 .cardProduct {
@@ -29,7 +28,7 @@ img {
 
 .price {
     font-size: 3rem;
-    color: #F80A67;
+    color: #f80a6564;
 }
 
 button {
@@ -47,6 +46,6 @@ button {
 
 
 button:hover {
-    background-color: #F80A67; 
+    background-color: #f80a6564; 
 }
 

@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { ShopService } from './../../services/shop.service';
 import { Component, OnInit, inject } from '@angular/core';
+import { Products } from 'src/app/interfaces/products.—type=“interface”';
 
 
 @Component({
@@ -10,10 +11,11 @@ import { Component, OnInit, inject } from '@angular/core';
 })
 export class ShopComponent implements OnInit {
 
-  cartItems: any[] = [];
+  cartItems: Products[] = [];
   total: number = 0;
   shopService = inject(ShopService)
   router = inject(Router)
+  
 
   ngOnInit(): void {
     this.loadCartItems();
@@ -24,13 +26,13 @@ export class ShopComponent implements OnInit {
     this.cartItems = this.shopService.cartItems;
   }
 
-  addToCart(product: any) {
+  addToCart(product: Products) {
     this. shopService.addToCart(product);
     this.loadCartItems();
     this.calculateTotal();
   }
 
-  removeCart(product: any) {
+  removeCart(product: Products) {
     this.shopService.removeCart(product);
     this.loadCartItems();
     this.calculateTotal();
@@ -41,7 +43,7 @@ export class ShopComponent implements OnInit {
     this.router.navigate(['/checkout'], { state: { products: this.cartItems } });
   }
 
-  buyOne(product: any) {
+  buyOne(product: Products) {
     this.shopService.buyProduct(product); 
     this.router.navigate(['/checkout'], { state: { products: [product] } }); 
   }

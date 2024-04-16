@@ -49,7 +49,7 @@ export class DetailsComponent {
     }
   }
 
-  addToCart(product: any) {
+  addToCart(product: Products) {
     this.shopService.addToCart(product);
   }
 

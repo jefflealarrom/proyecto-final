@@ -2,6 +2,7 @@ import { LoginService } from './../../services/login.service';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/interfaces/user.“interface”';
 
 @Component({
   selector: 'app-registre',
@@ -30,11 +31,11 @@ export class RegistreComponent {
       const userData = this.formulario.value;
       // Envía los datos del formulario a la API para agregar un nuevo usuario
       this.loginService.addUser(userData).subscribe({
-        next: (response: any) => {
+        next: (response: User) => {
           console.log('Respuesta de la API:', response);
           this.router.navigate(['/home']);
         },
-        error: (error: any) => {
+        error: (error: User) => {
           console.error('Error al agregar usuario:', error);
           this.mensajeError = 'Ocurrió un error al intentar agregar el usuario.';
         }

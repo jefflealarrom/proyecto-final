@@ -1,5 +1,6 @@
-<section *ngFor="let product of products">
+<section class="container" *ngFor="let product of products">
   <button class="home-button-all" routerLink="/home">↩︎</button>
+<<<<<<< HEAD
   <div class="photo">
     <div class="image-container">
       
@@ -14,22 +15,41 @@
 
 
     <div class="buttons">
+=======
+  
+  
+  
+  
+  <article class="photo">
+    <section class="image-container">
+      <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
+      <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
+      <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
+      <button class="home-button" routerLink="/home">↩︎</button>
+    </section>
+    <section class="buttons">
+>>>>>>> 2c47b388c5561560c5d699254d87e0f74e8eee00
       <button class="more" (click)="nextImage()">↾</button>
       <button class="less" (click)="prevImage()">⇂</button>
-    </div>
-  </div>
-  <div class="text">
-    <div class="info">
+    </section>
+  </article>
+
+
+
+
+
+  <article class="text">
+    <section class="info">
       <h3>{{ product.name }}</h3>
       <h5>{{ product.brand }}</h5>
       <h6>{{ product.gender }}</h6>
-      <div class="reverse">
+      <article class="reverse">
         <p>{{ product.info }}</p>
-        <div class="check">
-          <div class="color">
+        <section class="check">
+          <article class="color">
             <p id="price">{{ product.price }}</p>
-          </div>
-          <div class="btns">
+          </article>
+          <article class="btns">
             <label>
               <select>
                 <option value="">Seleccione una cantidad</option>
@@ -41,11 +61,11 @@
               </select>
             </label>
             <button (click)="addToCart(product)" routerLink="/shop">Añadir a la cesta</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          </article>
+        </section>
+      </article>
+    </section>
+  </article>
 </section>
 
 
