@@ -7,3 +7,12 @@
     list-style: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+main {
+    padding-top: 10vw;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        padding-top: 15vh;
+    }
+}
