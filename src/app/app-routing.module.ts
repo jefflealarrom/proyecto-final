@@ -14,6 +14,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AboutComponent } from './components/about/about.component';
 import { ShowUserComponent } from './components/show-user/show-user.component';
 import { EdisUserComponent } from './components/edis-user/edis-user.component';
+import { loginGuard } from './components/guards/login.guards';
 
 
 const routes: Routes = [
@@ -21,16 +22,15 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'allProducts', component: AllProductsComponent },
   { path: 'detail/:id', component: DetailsComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'woman', component: WomanComponent },
   { path: 'man', component: ManComponent },
   { path: 'registre', component: RegistreComponent },
   { path: 'logIn', component: LogInComponent },
   { path: 'logOut', component: LogOutComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'checkout', component: CheckoutComponent},
-  { path: 'user', component:ShowUserComponent },
-  { path: 'edit-user', component: EdisUserComponent },
+  { path: 'shop', component: ShopComponent, canActivate: [loginGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [loginGuard]},
+  { path: 'user', component:ShowUserComponent, canActivate: [loginGuard] },
+  { path: 'edit-user', component: EdisUserComponent, canActivate: [loginGuard] },
   { path: 'footer', component: AboutComponent },
   { path: '**', component: ErrorComponent },
  

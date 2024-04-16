@@ -49,6 +49,7 @@ form input[type="email"] {
     color: #f80a6564;
     background-color: #fff;
     transition: border-color 0.3s;
+    text-align: center;
 }
 
 form input[type="email"]:focus {
@@ -90,6 +91,7 @@ form input[type="email"]:focus {
     .container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .reverse {

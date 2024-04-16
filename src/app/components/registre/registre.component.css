@@ -19,14 +19,15 @@
 
   .form-group {
     margin-bottom: 2rem;
-    width: 100%;
+    text-align: center;
+    align-items: center;
   }
 
   input[type="text"],
   input[type="email"],
   input[type="password"] {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.7rem 0;
     margin-bottom: 0.5rem;
     border: 1px solid #f80a6564;
     border-radius: 1rem;
@@ -35,6 +36,7 @@
     color: #f80a6564;
     background-color: #fff;
     transition: border-color 0.3s;
+    text-align: center;
   }
   input[type="email"]:focus,
   input[type="password"]:focus,

@@ -46,7 +46,7 @@ ul li a:hover {
 @media screen and (max-width: 900px) {
     header {
         display: flex;
-        height: 15vh;
+        height: 10vh;
         width: 100vw;
     }
 

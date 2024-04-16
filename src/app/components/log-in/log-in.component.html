@@ -4,25 +4,26 @@
         <article class="form-group">
             <label for="email"></label>
             <input type="email" formControlName="email" placeholder="Correo">
-            <div
+            <section
                 *ngIf="formulario.get('email')?.invalid && (formulario.get('email')?.dirty || formulario.get('email')?.touched)">
-                <div *ngIf="formulario.get('email')?.errors?.['required']">
+                <article *ngIf="formulario.get('email')?.errors?.['required']">
                     <p class="small">El email es requerido</p>
-                </div>
-            </div>
+                </article>
+            </section>
         </article>
         <section class="form-group">
             <label for="password"></label>
             <input type="password" formControlName="password" placeholder="Contraseña">
-            <div
+            <article
                 *ngIf="formulario.get('password')?.invalid && (formulario.get('password')?.dirty || formulario.get('password')?.touched)">
-                <div *ngIf="formulario.get('password')?.errors?.['required']">
+                <section *ngIf="formulario.get('password')?.errors?.['required']">
                     <p class="small">La contraseña es requerida</p>
-                </div>
-            </div>
+                </section>
+            </article>
         </section>
         <button type="submit" [disabled]="!formulario.valid"
             [ngClass]="{'button-enabled': formulario.valid}">Enviar</button>
+            <button [routerLink]="['/registre']" type="submit">No tienes cuenta? Registrate</button>
         <div *ngIf="mensajeUser" class="send">
             <a [routerLink]="'/registrar'">{{ mensajeUser }}</a>
         </div>
