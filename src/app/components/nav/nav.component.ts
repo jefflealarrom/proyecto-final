@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { User } from 'src/app/interfaces/user.“interface”';
 import { LoginService } from 'src/app/services/login.service';
 
 
@@ -11,9 +12,14 @@ export class NavComponent {
 
   loginService = inject(LoginService)
   menuOpen: boolean = false;
+  loggedInUser: User | null = null;
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+  }
+
+  ngOnInit(): void {
+    this.loggedInUser = this.loginService.getCurrentUserFromLocalStorage();
   }
 
 }

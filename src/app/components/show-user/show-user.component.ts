@@ -17,12 +17,10 @@ export class ShowUserComponent implements OnInit {
     this.loadCurrentUser();
   }
 
-  // logout(): void {
-  //   this.loginService.logout();
-  //   this.router.navigate(['/logIn']); 
-
-  //   //mover la funcion al componente logout?
-  // }
+  logout(): void {
+    this.loginService.logout();
+    this.router.navigate(['/logOut']); 
+  }
 
   editUser(): void {
     this.router.navigate(['/edit-user']); 
@@ -43,7 +41,7 @@ export class ShowUserComponent implements OnInit {
       this.loginService.deleteUser(userId).subscribe({
         next: (response: User) => {
           console.log('Usuario eliminado:', response);
-          this.router.navigate(['/registre']);
+          this.router.navigate(['/logOut']);
         },
         error: (error: User) => {
           console.error('Error al eliminar usuario:', error);

@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+}
+
+button {
+  padding: 0.7rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #f80a6564;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 2rem;
+}
+
+button:hover {
+  background-color: #f80a6564;
+  border: none;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    width: 60%;
+  }
+}

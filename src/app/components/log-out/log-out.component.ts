@@ -1,5 +1,3 @@
-import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login.service';
 import { Component, inject } from '@angular/core';
 
 @Component({
@@ -9,12 +7,6 @@ import { Component, inject } from '@angular/core';
 })
 export class LogOutComponent {
 
-loginService = inject(LoginService)
-router = inject(Router)
 
-  logout(): void {
-    this.loginService.logout();
-    this.router.navigate(['/logIn']); 
-  }
 
 }

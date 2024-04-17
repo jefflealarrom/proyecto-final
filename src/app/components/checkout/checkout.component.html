@@ -1,15 +1,17 @@
-<section>
-  <h2>Gracias por tu compra</h2>
-  <h6>Tus productos comprados son:</h6>
-  <ol start="1">
-    <li *ngFor="let product of purchasedProducts; let i = index" class="product-item">
-      <span>{{ i + 1 }}.</span>
-      <img [src]="product.img_one" alt="{{ product.name }}" class="product-image">
-      <section class="product-details">
-        <h3>{{ product.name }}</h3>
-        <p>{{ product.brand }}</p>
-      </section>
-    </li>
-  </ol>
-  <button class="yes" [routerLink]="['/home']">Volver a la tienda</button>
-</section>
+<article>
+  <section class="card">
+    <h2>!Gracias por tu compra {{ loggedInUser?.name }}!</h2>
+    <h6>Tus productos comprados son:</h6>
+    <ol start="1">
+      <li *ngFor="let product of purchasedProducts; let i = index" class="product-item">
+        <span>{{ i + 1 }}.</span>
+        <img [src]="product.img_one" alt="{{ product.name }}" class="product-image">
+        <section class="product-details">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.brand }}</p>
+        </section>
+      </li>
+    </ol>
+    <button class="yes" [routerLink]="['/home']">Volver a la tienda</button>
+  </section>
+</article>

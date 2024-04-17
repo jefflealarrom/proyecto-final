@@ -10,6 +10,16 @@ header {
     z-index: 1;
 
 }
+.menu-user-figure img {
+    height: 3vh;
+   border-radius: 100%;
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 img {
     width: auto;
