@@ -1,7 +1,8 @@
+import { Products } from 'src/app/interfaces/products.—type=“interface”';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Products } from '../interfaces/products.—type=“interface”';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,7 @@ export class AllProductosService {
   getId(id: string): Observable<Products> {
     return this.urlHttp.get<Products>(`${this.url}/${id}`);
   }
-
+  getTop(): Observable<Products[]> {
+    return this.urlHttp.get<Products[]>(`${this.url}?top=True`)
+  }
 }

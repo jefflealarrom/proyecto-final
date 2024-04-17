@@ -1,27 +1,29 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
+import { AllProductosService } from 'src/app/services/all-productos.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-best-seller',
   templateUrl: './best-seller.component.html',
   styleUrls: ['./best-seller.component.css']
 })
-export class BestSellerComponent {
-  products: Products[] = [];
-  private http = inject(HttpClient)
+export class BestSellerComponent implements OnInit {
+  topProducts: Products[] = [];
+
+  constructor(private productService: AllProductosService) {}
 
   ngOnInit() {
-    this.fetchData();
+    this.fetchTopProducts();
   }
 
-  fetchData() {
-    this.http.get<any[]>('https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/products')
-      .subscribe(data => {
-        this.products = data.slice(0, 4);
-        console.log(this.products);
-      });
+  fetchTopProducts() {
+    this.productService.getTop().subscribe(
+      (data: Products[]) => {
+        this.topProducts = data;
+      },
+      (error) => {
+        console.error('Error fetching top products: ', error);
+      }
+    );
   }
-
-  // la api se esta llamando desde el servicio products, porque se vuelve a llamar desde este componente? importar el servicio y mostrar los productos que sean true
 }
