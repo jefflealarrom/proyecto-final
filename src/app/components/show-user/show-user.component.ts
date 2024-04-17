@@ -43,7 +43,7 @@ export class ShowUserComponent implements OnInit {
       this.loginService.deleteUser(userId).subscribe({
         next: (response: User) => {
           console.log('Usuario eliminado:', response);
-          this.router.navigate(['/logIn']);
+          this.router.navigate(['/registre']);
         },
         error: (error: User) => {
           console.error('Error al eliminar usuario:', error);

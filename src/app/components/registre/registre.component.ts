@@ -32,7 +32,7 @@ export class RegistreComponent {
       this.loginService.addUser(userData).subscribe({
         next: (response: User) => {
           console.log('Respuesta de la API:', response);
-          this.router.navigate(['/user']);
+          this.router.navigate(['/shop']);
         },
         error: (error: User) => {
           console.error('Error al agregar usuario:', error);

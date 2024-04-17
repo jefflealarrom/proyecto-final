@@ -3,19 +3,6 @@ h2 {
     justify-content: center;
     margin: 2rem;
     font-size: 3rem;
-    animation: changeColor 1s infinite alternate;
-}
-
-@keyframes changeColor {
-    0% {
-        color: black;
-    }
-    50% {
-        color: #f80a6564;
-    }
-    100% {
-        color: black;
-    }
 }
 
 

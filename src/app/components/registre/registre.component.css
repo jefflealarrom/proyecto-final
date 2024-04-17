@@ -2,6 +2,9 @@
     text-align: center;
     margin-bottom: 2rem;
   }
+  label {
+   display: none;
+  }
 
   .formularios {
     display: flex;

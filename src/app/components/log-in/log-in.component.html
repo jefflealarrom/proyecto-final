@@ -2,8 +2,8 @@
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <h2>Accede a tu cuenta</h2>
         <article class="form-group">
-            <label for="email"></label>
-            <input type="email" formControlName="email" placeholder="Correo">
+            <label for="emailregistre">correo</label>
+            <input type="email" formControlName="email" id="emailregistre" placeholder="Correo" autocomplete="email">
             <section
                 *ngIf="formulario.get('email')?.invalid && (formulario.get('email')?.dirty || formulario.get('email')?.touched)">
                 <article *ngIf="formulario.get('email')?.errors?.['required']">
@@ -12,8 +12,8 @@
             </section>
         </article>
         <section class="form-group">
-            <label for="password"></label>
-            <input type="password" formControlName="password" placeholder="Contraseña">
+            <label for="password">contraseña</label>
+            <input type="password" formControlName="password" id="password" placeholder="Contraseña" autocomplete="current-password">
             <article
                 *ngIf="formulario.get('password')?.invalid && (formulario.get('password')?.dirty || formulario.get('password')?.touched)">
                 <section *ngIf="formulario.get('password')?.errors?.['required']">
