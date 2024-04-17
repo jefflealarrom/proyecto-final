@@ -1,6 +1,6 @@
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
 import { AllProductosService } from 'src/app/services/all-productos.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 @Component({
   selector: 'app-best-seller',
@@ -9,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestSellerComponent implements OnInit {
   topProducts: Products[] = [];
-
-  constructor(private productService: AllProductosService) {}
+  productService = inject(AllProductosService)
 
   ngOnInit() {
     this.fetchTopProducts();
