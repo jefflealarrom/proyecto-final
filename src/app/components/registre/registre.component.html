@@ -17,7 +17,6 @@
     <section class="form-group">
       <label for="apellidos"></label>
       <input type="text" formControlName="lastname" placeholder="Apellidos">
-
       <article
         *ngIf="formulario.get('lastname')?.invalid && (formulario.get('lastname')?.dirty || formulario.get('lastname')?.touched)">
         <section *ngIf="formulario.get('lastname')?.errors?.['required']">
@@ -47,23 +46,20 @@
         caracteres</p>
     </section>
     <section class="form-group">
-      <label for="repite_password"></label>
-      <input type="password" formControlName="repite_password" placeholder="Repite tu contraseña">
+      <label for="repito_password"></label>
+      <input type="password" formControlName="repito_password" placeholder="Repite tu contraseña">
       <article
-        *ngIf="formulario.get('repite_password')?.invalid && (formulario.get('repite_password')?.dirty || formulario.get('repite_password')?.touched)">
-        <section *ngIf="formulario.get('repite_password')?.errors?.['required']">
+        *ngIf="formulario.get('repito_password')?.invalid && (formulario.get('repito_password')?.dirty || formulario.get('repito_password')?.touched)">
+        <section *ngIf="formulario.get('repito_password')?.errors?.['required']">
           <p class="small">La repeticion de contraseña es requerida</p>
         </section>
-        <section *ngIf="formulario.get('repite_password')?.errors?.['minlength']">
+        <section *ngIf="formulario.get('repito_password')?.errors?.['minlength']">
           <p class="small">La contraseña debe coincidir con la anterior</p>
         </section>
       </article>
     </section>
-    <button type="submit" [disabled]="formulario.invalid" [ngClass]="{'button-enabled': formulario.valid}">
-      Enviar
-    </button>
-    <section *ngIf="mensajeEnviado">
-      <p class="send">¡El formulario ha sido enviado con éxito!</p>
-    </section>
+    <button type="submit">Enviar</button>
+    <button [routerLink]="['/logIn']" type="submit">Ya tienes una cuenta?</button>
   </form>
+  <p class="small">{{mensajeError}}</p>
 </section>

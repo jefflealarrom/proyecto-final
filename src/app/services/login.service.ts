@@ -30,7 +30,6 @@ export class LoginService {
     }
   }
   
-
   getCurrentUserFromLocalStorage(): User | null {
     const userString = localStorage.getItem('currentUser');
     return userString ? JSON.parse(userString) : null;

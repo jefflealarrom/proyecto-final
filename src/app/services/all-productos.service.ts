@@ -24,4 +24,5 @@ export class AllProductosService {
   getId(id: string): Observable<Products> {
     return this.urlHttp.get<Products>(`${this.url}/${id}`);
   }
+
 }

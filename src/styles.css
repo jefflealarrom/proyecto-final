@@ -17,12 +17,12 @@
 @import "primeng/resources/primeng.css";
 =======
 main {
-    padding-top: 10vw;
+    padding-top:10vw;
 }
 
 @media screen and (max-width: 900px) {
     main {
-        padding-top: 15vh;
+        padding-top: 10vh;
     }
 }
 >>>>>>> 2c47b388c5561560c5d699254d87e0f74e8eee00
