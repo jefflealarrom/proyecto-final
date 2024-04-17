@@ -6,18 +6,21 @@ header {
     align-items: center;
     justify-content: space-around;
     background-image:
-    linear-gradient(to bottom, #f80a6564 10%, transparent 100%);
+        linear-gradient(to bottom, #f80a6564 10%, transparent 100%);
     z-index: 1;
 
 }
-.menu-user-figure img {
-    height: 3vh;
-   border-radius: 100%;
-   
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+.menu-user-figure {
     cursor: pointer;
+
+    img {
+        height: 3vh;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 

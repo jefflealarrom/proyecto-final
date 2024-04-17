@@ -24,12 +24,15 @@
                     (click)="toggleMenu()">Register</a></li>
                     <li>
                         <figure *ngIf="loginService.isLogin()" class="menu-user-figure link" [routerLink]="['/user']" (click)="toggleMenu()">
-                          <img *ngIf="loggedInUser?.image; else userText" [src]="loggedInUser?.image" alt="Imagen de perfil">
+                          <ng-container *ngIf="loggedInUser?.image; else userText">
+                            <img [src]="loggedInUser?.image" alt="Imagen de perfil">
+                          </ng-container>
                           <ng-template #userText>
-                            <span>User</span>
+                            <span>{{ loggedInUser?.name }}</span>
                           </ng-template>
                         </figure>
                       </li>
+                      
                       
             <li><a class="link" [routerLink]="['/shop']" (click)="toggleMenu()"><i
                         class="fa-solid fa-cart-shopping"></i></a></li>
