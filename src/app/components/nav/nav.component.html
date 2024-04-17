@@ -18,9 +18,10 @@
             <li><a class="link" [routerLink]="['/allProducts']" (click)="toggleMenu()">Fragancias</a></li>
             <li><a class="link" [routerLink]="['/woman']" (click)="toggleMenu()">Woman</a></li>
             <li><a class="link" [routerLink]="['/man']" (click)="toggleMenu()">Man</a></li>
-            <li><a class="link" [routerLink]="['/logIn']" (click)="toggleMenu()">Log in</a></li>
-            <li><a class="link" [routerLink]="['/registre']" (click)="toggleMenu()">Register</a></li>
-            <li><a class="link" [routerLink]="['/logOut']" (click)="toggleMenu()">Log Out</a></li>
+            <li><a *ngIf="!loginService.isLogin()" class="link" [routerLink]="['/logIn']" (click)="toggleMenu()">Log in</a></li>
+            <li><a *ngIf="!loginService.isLogin()" class="link" [routerLink]="['/registre']" (click)="toggleMenu()">Register</a></li>
+            <li><a *ngIf="loginService.isLogin()" class="link" [routerLink]="['/user']" (click)="toggleMenu()">Usuario</a></li>
+            <li><a *ngIf="loginService.isLogin()" class="link" [routerLink]="['/logOut']" (click)="toggleMenu()">Log Out</a></li>
             <li><a class="link" [routerLink]="['/shop']" (click)="toggleMenu()"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </article>

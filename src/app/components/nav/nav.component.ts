@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  loginService = inject(LoginService)
   menuOpen: boolean = false;
 
   toggleMenu(): void {

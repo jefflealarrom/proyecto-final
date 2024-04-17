@@ -11,9 +11,9 @@ export class LoginService {
 
   private urlUser = 'https://661270f095fdb62f24eeaffd.mockapi.io/api/perfumes/user';
   private http = inject(HttpClient)
-  
 
-  validUser(email: string, password: string): Observable<User[]> {  
+
+  validUser(email: string, password: string): Observable<User[]> {
     const params = new HttpParams().set('email', email).set('password', password);
     return this.http.get<User[]>(this.urlUser, { params });
   }
@@ -25,7 +25,7 @@ export class LoginService {
       localStorage.removeItem('currentUser');
     }
   }
-  
+
   getCurrentUserFromLocalStorage(): User | null {
     const userString = localStorage.getItem('currentUser');
     return userString ? JSON.parse(userString) : null;
@@ -61,4 +61,8 @@ export class LoginService {
       })
     );
   }
+  isLogin(): boolean {
+    return localStorage.getItem('currentUser') ? true : false
+  }
+
 }

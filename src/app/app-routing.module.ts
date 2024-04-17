@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'man', component: ManComponent },
   { path: 'registre', component: RegistreComponent },
   { path: 'logIn', component: LogInComponent },
-  { path: 'logOut', component: LogOutComponent },
+  { path: 'logOut', component: LogOutComponent, canActivate: [loginGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [loginGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [loginGuard]},
   { path: 'user', component:ShowUserComponent, canActivate: [loginGuard] },
