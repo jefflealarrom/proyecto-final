@@ -43,7 +43,7 @@ section {
 }
 
 .all {
-    background-image: url("https://shop.vismaressence.com/modules/ph_simpleblog/featured/108.png");
+    background-image: url("src/assets/img/portadatodos.jpeg");
     width: 100%;
     height: 38vh;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ section {
 }
 
 .woman {
-    background-image: url("https://t3.ftcdn.net/jpg/05/04/60/64/240_F_504606457_SJUAuBUUu6ZvLjvXVanDKAzQvqvWfQKZ.jpg");
+    background-image: url("src/assets/img/portadamujer.jpeg");
     width: 50%;
     height: 38vh;
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@ section {
 }
 
 .man {
-    background-image: url("https://t3.ftcdn.net/jpg/01/92/11/58/240_F_192115869_bR3vWLlkLtxfKmjo96OWZe1iSzVhL2gn.jpg");
+    background-image: url("src/assets/img/portadaholmbre.jpeg");
     width: 50%;
     height: 38vh;
     background-repeat: no-repeat;
@@ -95,11 +95,16 @@ a {
 
 }
 
+
 a:hover {
     color: #f80a6564;
 
-}
+    a:hover {
+        text-decoration: underline;
 
+    }
+
+}
 
 @media screen and (max-width: 600px) {
     .flex {
