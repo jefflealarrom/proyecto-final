@@ -1,42 +1,3 @@
-/* div {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    a {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 0.5rem 1.5rem;
-        border-radius: 1rem;
-        font-size: 3rem;
-        
-    }
-}
-
-.all {
-    background-image: url(https://64.media.tumblr.com/1f1794d6f19845f98a05d9a40201b463/77d4f46bb1307ae7-17/s640x960/6eecc31dd7c90d0a487ac84ce39fe4e38f6d925b.gif);
-}
-
-.woman {
-    background-image: url(https://64.media.tumblr.com/cc59a1f85e62a8374b007b50aab7746d/ebdb8554a282b041-92/s500x750/6892e095e45001d0cae73651dee73807db50ae0e.gif);
-}
-
-.man {
-    background-image: url(https://64.media.tumblr.com/73baecb69ade0e6a7d14d2bec89d831f/f94143e7653a279b-73/s540x810/6ca0afdc92de89f231464f8816b09422ae65ff43.gif);
-}
-
-
-@media screen and (max-width: 600px) {
-    div a {
-        font-size: 1.5rem; 
-    }
-} */
-
 section {
     width: 100vw;
     height: auto;
@@ -45,7 +6,7 @@ section {
 .all {
     background-image: url("src/assets/img/portadatodos.jpeg");
     width: 100%;
-    height: 38vh;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -65,7 +26,7 @@ section {
 .woman {
     background-image: url("src/assets/img/portadamujer.jpeg");
     width: 50%;
-    height: 38vh;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -77,7 +38,7 @@ section {
 .man {
     background-image: url("src/assets/img/portadaholmbre.jpeg");
     width: 50%;
-    height: 38vh;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,15 +68,21 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
+    .all{
+       height: 30vh;  
+    }
+
     .flex {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        gap: 1rem;
     }
 
     .woman,
     .man {
         width: 100%;
+        height: 30vh;
     }
 
 }
