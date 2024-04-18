@@ -15,6 +15,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ShowUserComponent } from './components/show-user/show-user.component';
 import { EdisUserComponent } from './components/edis-user/edis-user.component';
 import { loginGuard } from './components/guards/login.guards';
+import { AboutweComponent } from './components/aboutwe/aboutwe.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,9 @@ const routes: Routes = [
   { path: 'user', component:ShowUserComponent, canActivate: [loginGuard] },
   { path: 'edit-user', component: EdisUserComponent, canActivate: [loginGuard] },
   { path: 'footer', component: AboutComponent },
+  { path: 'aboutwe', component: AboutweComponent},
   { path: '**', component: ErrorComponent },
+  
  
 
 

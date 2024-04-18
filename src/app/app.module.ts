@@ -22,6 +22,7 @@ import { AboutComponent } from "../app/components/about/about.component";
 import { ShowUserComponent } from './components/show-user/show-user.component';
 import { EdisUserComponent } from './components/edis-user/edis-user.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
+import { AboutweComponent } from './components/aboutwe/aboutwe.component';
 
 
 
@@ -49,6 +50,7 @@ import { BestSellerComponent } from './components/best-seller/best-seller.compon
     ShowUserComponent,
     EdisUserComponent,
     BestSellerComponent,
+    AboutweComponent,
 
   ],
   imports: [
