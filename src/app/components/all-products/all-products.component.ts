@@ -1,7 +1,7 @@
 import { AllProductosService } from 'src/app/services/all-productos.service';
 import { Component, OnInit, inject } from '@angular/core';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
@@ -11,7 +11,7 @@ export class AllProductsComponent implements OnInit {
 
   products: Products[] = [];
   productService = inject(AllProductosService)
-  router = inject(Router)
+  // router = inject(Router)
 
   ngOnInit(): void {
     this.fetchPosts();
