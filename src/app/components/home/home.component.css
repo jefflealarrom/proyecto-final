@@ -52,7 +52,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .flex {
@@ -91,12 +91,13 @@ a {
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
-    padding: 0.3rem 2rem ;
+    padding: 0.3rem 2rem;
 
 }
- a:hover {
+
+a:hover {
     color: #f80a6564;
-    
+
 }
 
 

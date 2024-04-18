@@ -11,6 +11,11 @@ header {
 
 }
 
+.menu ul li.active-user a  {
+    text-decoration: underline;
+    color: #f80a6564;
+}
+
 .menu-user-figure {
     cursor: pointer;
 
@@ -41,7 +46,7 @@ ul {
 }
 
 ul li a {
-    color: black;
+   color: black;
     padding: 1rem;
 
 }
@@ -61,6 +66,7 @@ ul li a:hover {
         display: flex;
         height: 10vh;
         width: 100vw;
+
     }
 
     .menu {
@@ -68,15 +74,25 @@ ul li a:hover {
         position: absolute;
     }
 
+    .menu ul li.active-user a  {
+        text-decoration: underline;
+        color: white;
+    }
+
     .menu.active {
         display: flex;
-        background-color: #f80a6564;
+        background-color: #f80a65cc;
         width: 100vw;
-        height: 50vh;
-        top: 9.22rem;
+        height: 100vh;
+        top: 4.2rem;
         align-items: center;
         text-align: center;
         justify-content: center;
+    }
+
+    ul li a:hover {
+        color: white;
+
     }
 
     img {

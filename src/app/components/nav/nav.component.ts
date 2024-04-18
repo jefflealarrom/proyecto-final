@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.“interface”';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -13,6 +14,7 @@ export class NavComponent {
   loginService = inject(LoginService)
   menuOpen: boolean = false;
   loggedInUser: User | null = null;
+  router = inject(Router)
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
@@ -20,6 +22,10 @@ export class NavComponent {
 
   ngOnInit(): void {
     this.loggedInUser = this.loginService.getCurrentUserFromLocalStorage();
+  }
+
+  isActiveRoute(route: string): boolean {
+    return this.router.url === route;
   }
 
 }
