@@ -1,12 +1,14 @@
-<section *ngIf="currentUser">
-    <img src="{{currentUser.image }}" alt="Avatar de usuario">
+<section class="container" *ngIf="currentUser">
+  <img src="{{currentUser.image }}" alt="Avatar de usuario">
+  <article class="info">
     <h2>Hello {{ currentUser.name }} {{ currentUser.lastname }}!!</h2>
-    <p>Tu correo es: {{ currentUser.email }}</p>
-    <p>y tu contraseña es {{ currentUser.password }}</p>
+    <p>Correo: {{ currentUser.email }}</p>
+    <p>Contraseña: {{ currentUser.password }}</p>
+    <section class="btn">
     <button (click)="editUser()">Editar datos</button>
     <button (click)="logout()">Cerrar sesión</button>
     <button (click)="deleteUser()">Eliminar usuario</button>
-    
   </section>
-  <p *ngIf="!currentUser">No se ha iniciado sesión.</p>
-  
+  </article>
+</section>
+<p *ngIf="!currentUser">No se ha iniciado sesión.</p>

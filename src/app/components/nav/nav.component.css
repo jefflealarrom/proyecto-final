@@ -20,7 +20,8 @@ header {
     cursor: pointer;
 
     img {
-        height: 3vh;
+      height: 3vh;
+      width: 1.7vw;
         border-radius: 100%;
         justify-content: center;
         align-items: center;
@@ -144,5 +145,13 @@ ul li a:hover {
     li a:focus {
         color: whitesmoke;
         text-decoration: underline;
+    }
+
+    .menu-user-figure {
+    
+        img {
+          height: 5vh;
+          width: 8vw;
+        }
     }
 }
