@@ -85,19 +85,13 @@
 
   .send {
     position: absolute;
-    color: black;
+color: #f80a6564;
     margin-top: 1rem;
-
-    a {
-        text-decoration: none;
-        color: black;
-
-        &:hover {
-            text-decoration: underline;
-            color: #f80a6564;
-        }
-    }
+    font-size: 1rem;
+  font-style: italic;
   }
+
+ 
 
   @media (max-width: 768px) {
     form {
