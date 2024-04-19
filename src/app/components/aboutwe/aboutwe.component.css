@@ -52,4 +52,22 @@ li{
 .description{
     margin:4vw;
     width: 40vw;
+    text-align: justify;
+}
+@media screen and (max-width: 900px) {
+    .contenedor{
+        display: block;
+        margin-left: 5vw;
+        width: 100vw
+    }
+    .description{
+        width: 80vw;
+        text-align: justify;
+    }
+    .photo{
+        width: 60vw;
+        img{
+            width: 100%;
+        }
+    }
 }
