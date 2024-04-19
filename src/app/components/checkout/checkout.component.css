@@ -1,4 +1,8 @@
-section {
+article{
+    min-height: 80vh;
+
+}
+.card {
     width: 100vw;
     height: auto;
     display: flex;

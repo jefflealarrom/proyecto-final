@@ -7,7 +7,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: auto;
+    min-height: 65vh;
 }
 
 .cardProduct {

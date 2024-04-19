@@ -2,6 +2,9 @@ h2 {
     text-align: center;
     padding-bottom: 2rem;
 }
+label {
+    display: none;
+}
 
 .formularios {
     display: flex;

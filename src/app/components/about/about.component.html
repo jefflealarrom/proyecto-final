@@ -6,12 +6,12 @@
                 <a routerLink="/**">
                     <i class="fab fa-instagram">
                     </i> Instagram</a>
-            </li>
+                </li>
             <li>
                 <a routerLink="/**">
                     <i class="fab fa-twitter">
                     </i> Twitter</a>
-            </li>
+                </li>
             <li>
                 <a routerLink="/**">
                     <i class="fab fa-facebook">
@@ -23,7 +23,7 @@
         <h5>Descuentos extras</h5>
         <form (submit)="submitForm()">
             <label for="email"></label>
-            <input type="email" id="email" name="email" required placeholder="Tu mejor email">
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="Tu mejor email">
             <button routerLink="/**" type="submit">Lo quiero</button>
         </form>
     </article>
