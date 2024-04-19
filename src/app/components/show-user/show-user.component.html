@@ -1,5 +1,5 @@
 <section class="container" *ngIf="currentUser">
-  <img src="{{currentUser.image }}" alt="Avatar de usuario">
+  <img src="{{currentUser.image }}" alt="">
   <article class="info">
     <h2>Hello {{ currentUser.name }} {{ currentUser.lastname }}!!</h2>
     <p>Correo: {{ currentUser.email }}</p>
@@ -7,7 +7,7 @@
     <section class="btn">
     <button (click)="editUser()">Editar datos</button>
     <button (click)="logout()">Cerrar sesión</button>
-    <button (click)="deleteUser()">Eliminar usuario</button>
+    <button [routerLink]="['/delete']">Eliminar usuario</button>
   </section>
   </article>
 </section>
