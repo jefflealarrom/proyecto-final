@@ -61,6 +61,7 @@ export class ShopComponent implements OnInit {
       const price = parseFloat(item.price.replace(',', '.'));
       return acc + price * item.quantity;
     }, 0);
+    this.total = parseFloat(this.total.toFixed(2));
   }
 
 
