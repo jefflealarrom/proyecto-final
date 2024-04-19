@@ -14,11 +14,12 @@ h2 {
     background-color: whitesmoke;
     display: flex;
     margin-top: 2rem;
+    height: auto;
 }
 
 img {
     max-height: auto;
-    max-width: 15rem;
+    max-width: 20rem;
 }
 
 .info {
@@ -27,7 +28,7 @@ img {
     align-items: center;
     padding: 1rem;
     width: 20rem;
-    height: 3rem;
+    min-height: 10rem;
 }
 
 .price {
@@ -48,12 +49,17 @@ button {
     background-color: transparent;
     border-radius: 0.5rem;
     padding: 0.7rem;
-    margin-top: 0.9rem;
+    margin-top: 0.5rem;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
     justify-content: center;
     align-items: center;
+    no {
+        margin-bottom: 1rem;
+    }
+
+
 
 }
 
@@ -73,6 +79,7 @@ button {
     text-align: center;
 
 }
+
 .btn {
     display: flex;
     flex-direction: column;
@@ -81,28 +88,43 @@ button {
 .compra {
     display: flex;
     flex-direction: column;
+    width:10rem;
 }
+
 #total {
     color: #f80a6564;
     padding: 0;
     font-size: 3rem;
-    
+
 }
 
 .final {
     padding: 0;
-    
+
 }
 
+.btnbtn {
+    display: flex;
+    flex-direction: column;
+}
+
+
 @media (max-width: 768px) {
+    .containerProduct {
+        min-height: 90vh;
+    }
+
     .cardProduct {
         width: 100%;
+        height: 50vh;
     }
 
     img {
         max-width: 50%;
     }
-
+.info {
+    min-width: 40%;
+}
 
     h3,
     small,

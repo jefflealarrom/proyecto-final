@@ -9,9 +9,11 @@
         <section class="product-details">
           <h3>{{ product.name }}</h3>
           <p>{{ product.brand }}</p>
+          <small>{{ product.quantity }} Productos comprados</small>
         </section>
       </li>
     </ol>
+    <p id="total">Total de la compra: {{ total }}</p>
     <button class="yes" [routerLink]="['/home']">Volver a la tienda</button>
   </section>
 </article>

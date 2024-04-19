@@ -3,17 +3,17 @@
         <h5>Estamos en:</h5>
         <ul>
             <li>
-                <a routerLink="/**">
+                <a [routerLink]="['/**']">
                     <i class="fab fa-instagram">
                     </i> Instagram</a>
                 </li>
             <li>
-                <a routerLink="/**">
+                <a [routerLink]="['/**']">
                     <i class="fab fa-twitter">
                     </i> Twitter</a>
                 </li>
             <li>
-                <a routerLink="/**">
+                <a [routerLink]="['/**']">
                     <i class="fab fa-facebook">
                     </i> Facebook</a>
             </li>
@@ -24,7 +24,7 @@
         <form (submit)="submitForm()">
             <label for="email"></label>
             <input type="email" id="email" name="email" required autocomplete="email" placeholder="Tu mejor email">
-            <button routerLink="/**" type="submit">Lo quiero</button>
+            <button [routerLink]="['/logOut']" type="submit">Lo quiero</button>
         </form>
     </article>
     <article class="about">
