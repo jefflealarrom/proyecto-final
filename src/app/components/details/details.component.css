@@ -138,7 +138,7 @@ select {
     }
     .image-container {
         width: 100vw; 
-        height: 50vh; 
+        height: 60vh; 
         overflow: hidden; 
         position: relative;
     }
