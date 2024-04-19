@@ -32,12 +32,12 @@ export class DetailsComponent {
   }
 
   nextImage() {
-    const numImages = 3; // Número total de imágenes
+    const numImages = 3;
     this.index = (this.index + 1) % numImages;
   }
   
   prevImage() {
-    const numImages = 3; // Número total de imágenes
+    const numImages = 3; 
     this.index = (this.index - 1 + numImages) % numImages;
   }
   
