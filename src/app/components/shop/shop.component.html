@@ -7,9 +7,9 @@
         <img [src]="product.img_one" alt="{{ product.name }}">
         <article class="info">
           <h3>{{ product.name }}</h3>
-          <small>{{product.gender}}</small>
           <h6>{{product.brand}}</h6>
-          <h5>{{ product.price }}</h5>
+          <small>Items: {{ getProductQuantity(product.id) }}</small>
+          <small>Sub-total</small> <span id="total">{{ getProductTotalPrice(product.id) }}</span>
           <button class="yes" [routerLink]="['/checkout', { products: cartItems }]" (click)="buyOne(product)">✓</button>
           <button class="no" (click)="removeCart(product)">𐄂</button>
         </article>

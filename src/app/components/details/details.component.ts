@@ -17,6 +17,8 @@ export class DetailsComponent {
   router = inject(ActivatedRoute)
   index: number = 0;
   shopService = inject(ShopService)
+  selectedQuantity: number = 1;
+
   
 
   ngOnInit(): void {
@@ -42,9 +44,16 @@ export class DetailsComponent {
   }
   
 
-  addToCart(product: Products) {
-    this.shopService.addToCart(product);
+  onQuantityChange(value: string): void {
+    this.selectedQuantity = parseInt(value, 10);
   }
+
+  addToCart(product: Products) { 
+    const quantityToAdd = this.selectedQuantity !== null ? this.selectedQuantity : 1;
+    this.shopService.addToCart(product, quantityToAdd);
+  }
+  
+    
 
 }
 

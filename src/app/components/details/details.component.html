@@ -28,16 +28,15 @@
           </article>
           <article class="btns">
             <label>
-              <select>
+              <select #quantitySelect (change)="onQuantityChange(quantitySelect.value)">
                 <option value="">Seleccione una cantidad</option>
-                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
             </label>
-            <button (click)="addToCart(product)" [routerLink]="['/shop']">Añadir a la cesta</button>
+            <button (click)="addToCart(product)" [routerLink]="['/shop']" [disabled]="!selectedQuantity">Añadir a la cesta</button>
           </article>
         </section>
       </article>
