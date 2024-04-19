@@ -34,7 +34,7 @@
                 <option value="5">5</option>
               </select>
             </label>
-            <button (click)="addToCart(product)" routerLink="/shop">Añadir a la cesta</button>
+            <button (click)="addToCart(product)" [routerLink]="['/shop']">Añadir a la cesta</button>
           </article>
         </section>
       </article>

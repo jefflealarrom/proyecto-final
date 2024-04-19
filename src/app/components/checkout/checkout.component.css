@@ -1,5 +1,5 @@
 article{
-    min-height: 80vh;
+    min-height: 65vh;
 
 }
 .card {
@@ -51,4 +51,10 @@ button {
 
 .yes:hover {
     background-color: #f80a6564;
+}
+
+@media only screen and (max-width: 600px) {
+article {
+    min-height: 90vh;
+}
 }

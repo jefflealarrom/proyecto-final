@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AboutComponent {
     submitForm() {
         console.log('Formulario enviado');
-}
+    }
 }
