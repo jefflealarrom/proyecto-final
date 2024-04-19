@@ -1,5 +1,5 @@
 <section class="container" *ngFor="let product of products">
-  <button class="home-button-all" routerLink="/home">↩︎</button>
+  <button class="home-button-all" [routerLink]="['/allProducts']">↩︎</button>
   <article class="photo">
     <section class="image-container">
       <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 0" class="show-image"
@@ -8,7 +8,7 @@
         [class.show-image]="index === 1">
       <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 2" 
         [class.show-image]="index === 2">
-      <button class="home-button" routerLink="/home">↩︎</button>
+      <button class="home-button" [routerLink]="['/allProducts']">↩︎</button>
     </section>
     <section class="buttons">
       <button class="more" (click)="nextImage()">↾</button>
