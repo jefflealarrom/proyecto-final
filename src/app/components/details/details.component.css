@@ -26,14 +26,17 @@
 }
 
 .image-container {
-    width: 60rem; /* Ancho fijo para el contenedor de imágenes */
-    height: 51rem; /* Altura fija para el contenedor de imágenes */
-    overflow: hidden; /* Centra horizontalmente las imágenes */
+    width: 60rem; 
+    height: 51rem; 
+    overflow: hidden; 
+    position: relative;
 }
 
 img {
-    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes para que se ajusten al contenedor */
-    height: auto; /* Mantiene la proporción original de las imágenes */
+    max-width: 100%; 
+    height: auto; 
+    position: absolute; 
+    transition: opacity 2s ease-in-out;
 }
 
 
@@ -133,7 +136,12 @@ select {
         max-width: 100%;
         flex-direction: column;
     }
-
+    .image-container {
+        width: 100vw; 
+        height: 50vh; 
+        overflow: hidden; 
+        position: relative;
+    }
     .buttons {
         transform: rotate(90deg);
         height: 3rem;
