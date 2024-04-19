@@ -32,18 +32,15 @@ export class DetailsComponent {
   }
 
   nextImage() {
-    const product = this.products[0];
-    const numImages = [product.img_one, product.img_two, product.img_three].filter(img => img).length;
-    if (this.index < numImages - 1) {
-      this.index++;
-    }
+    const numImages = 3; // Número total de imágenes
+    this.index = (this.index + 1) % numImages;
   }
-
+  
   prevImage() {
-    if (this.index > 0) {
-      this.index--;
-    }
+    const numImages = 3; // Número total de imágenes
+    this.index = (this.index - 1 + numImages) % numImages;
   }
+  
 
   addToCart(product: Products) {
     this.shopService.addToCart(product);
