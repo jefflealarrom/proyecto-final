@@ -53,6 +53,11 @@ button {
     background-color: #f80a6564;
 }
 
+#total {
+    color: #f80a6564;
+    font-size: 2rem;
+
+}
 @media only screen and (max-width: 600px) {
 article {
     min-height: 90vh;

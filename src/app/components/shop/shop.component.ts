@@ -79,8 +79,21 @@ export class ShopComponent implements OnInit {
     return this.shopService.getProductTotalPriceById(productId);
   }
   
-  
+  increaseQuantity(product: Products): void {
+    const index = this.cartItems.findIndex(item => item.id === product.id);
+    if (index !== -1) {
+      this.cartItems[index].quantity++;
+      this.calculateTotal();
+    }
+  }
+
+  decreaseQuantity(product: Products): void {
+    const index = this.cartItems.findIndex(item => item.id === product.id);
+    if (index !== -1 && this.cartItems[index].quantity > 1) {
+      this.cartItems[index].quantity--;
+      this.calculateTotal();
+    }
   
   
 }
-
+}

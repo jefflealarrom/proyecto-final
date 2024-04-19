@@ -8,7 +8,11 @@
         <article class="info">
           <h3>{{ product.name }}</h3>
           <h6>{{product.brand}}</h6>
-          <small>Items: {{ getProductQuantity(product.id) }}</small>
+          <section class="btnbtn">
+            <button (click)="increaseQuantity(product)">+</button> <small>Items: {{ getProductQuantity(product.id)
+              }}</small>
+            <button (click)="decreaseQuantity(product)">-</button>
+          </section>
           <small>Sub-total</small> <span id="total">{{ getProductTotalPrice(product.id) }}</span>
           <button class="yes" [routerLink]="['/checkout', { products: cartItems }]" (click)="buyOne(product)">✓</button>
           <button class="no" (click)="removeCart(product)">𐄂</button>

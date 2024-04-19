@@ -7,6 +7,7 @@ import { Products } from '../interfaces/products.—type=“interface”';
 export class ShopService {
   cartItems: Products[] = [];
  
+ 
   // addToCart(product: any): void {
   //   this.cartItems.push(product);
     
@@ -50,18 +51,22 @@ export class ShopService {
   
 
   getProductTotalPriceById(productId: string): number {
-    return this.cartItems.reduce((total, item) => {
-      if (item.id === productId) {
-        const price = parseFloat(item.price.replace(',', '.'));
-        return total + (price * item.quantity);
-      }
-      return total;
-    }, 0);
+    return parseFloat(
+      this.cartItems.reduce((total, item) => {
+        if (item.id === productId) {
+          const price = parseFloat(item.price.replace(',', '.'));
+          return total + (price * item.quantity);
+        }
+        return total;
+      }, 0).toFixed(2)
+    );
   }
+  
 
   getTotalQuantity(): number {
     return this.cartItems.reduce((total, item) => total + item.quantity, 0);
   }
+
   
 }
 
