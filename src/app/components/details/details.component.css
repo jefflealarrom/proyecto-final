@@ -192,8 +192,8 @@ select {
     }
 
     .home-button {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 4rem;
         right: 0;
         background-color: #f80a6564;
         color: white;

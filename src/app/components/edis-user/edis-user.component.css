@@ -5,16 +5,21 @@
     justify-content: space-around;
     align-items: center;
 }
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+}
 
 img {
-    width: 30vw;
-    height: 30vw;
     border-radius: 100%;
     background-color: #f80a6564;
 }
 
 .info {
     text-align: center;
+    min-width: 50%;
 }
 
 label {
@@ -22,7 +27,7 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 80%;
     padding: 0.7rem 0;
     margin-bottom: 0.5rem;
     border: 1px solid #f80a6564;
@@ -47,7 +52,7 @@ input {
 
 
   button {
-    width: 100%;
+    width: 80%;
     padding: 0.7rem;
     color: black;
     background-color: transparent;
@@ -66,10 +71,27 @@ input {
     transform: scale(1.05);
   }
 
-@media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .container {
         flex-direction: column;
         width: 100vw;
         min-height: 90vh;
+        justify-content:start
     }
+
+  
+    img {
+      width: 50%;
+      height: 50%;
+
+  }
+  .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20rem;
+      width: 100vw;
+
+  }
+
 }

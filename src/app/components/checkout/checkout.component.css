@@ -1,7 +1,8 @@
-article{
+article {
     min-height: 65vh;
-
+    width: 100vw;
 }
+
 .card {
     width: 100vw;
     height: auto;
@@ -58,8 +59,13 @@ button {
     font-size: 2rem;
 
 }
+
 @media only screen and (max-width: 600px) {
-article {
-    min-height: 90vh;
-}
+    article {
+        min-height: 90vh;
+    }
+
+    #total {
+        font-size: 1.5rem;
+    }
 }

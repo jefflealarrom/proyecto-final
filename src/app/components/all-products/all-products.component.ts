@@ -1,7 +1,6 @@
 import { AllProductosService } from 'src/app/services/all-productos.service';
 import { Component, OnInit, inject } from '@angular/core';
 import { Products } from 'src/app/interfaces/products.—type=“interface”';
-// import { Router } from '@angular/router';
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
@@ -11,7 +10,6 @@ export class AllProductsComponent implements OnInit {
 
   products: Products[] = [];
   productService = inject(AllProductosService)
-  // router = inject(Router)
 
   ngOnInit(): void {
     this.fetchPosts();
@@ -27,10 +25,4 @@ export class AllProductsComponent implements OnInit {
     );
   }
 
-  // addToCart(product : Products): void {
-  //   this.router.navigate(['/shop'])
-  // }
-
-  // la funcion addtocard esta bien definida, tambien se puede usar el router link directamemte desde el html, creo que podría ser mas fácil a la hora de manejar errores
-  
 }
