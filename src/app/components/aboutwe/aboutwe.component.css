@@ -39,6 +39,16 @@
     justify-content: center;
     margin-top: 5vw;
 }
+.link{
+    margin-top: 5vw;
+}
+    ul{
+    display: block;
+    margin-top: 5vw;
+}
+li{
+    padding-bottom: 1vw;
+}
 .description{
     margin:4vw;
     width: 40vw;
