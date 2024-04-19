@@ -14,26 +14,28 @@
 
 .container {
     height: auto;
-    width: 100vw;
+    min-width: 100vw;
     display: flex;
 }
 
 .photo {
     display: flex;
-    max-width: 50%;
+    min-width: 50%;
     position: relative;
     justify-content: flex-end;
 }
 
 .image-container {
-    max-height: 100%;
-    max-width: 100%;
+    width: 60rem; /* Ancho fijo para el contenedor de imágenes */
+    height: 51rem; /* Altura fija para el contenedor de imágenes */
+    overflow: hidden; /* Centra horizontalmente las imágenes */
 }
 
 img {
-    max-width: 100%;
-    height: 100%;
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes para que se ajusten al contenedor */
+    height: auto; /* Mantiene la proporción original de las imágenes */
 }
+
 
 .buttons {
     display: flex;
@@ -119,9 +121,6 @@ select {
     border: none;
     border-bottom: 1px solid black;
 }
-
-
-
 
 @media screen and (max-width: 768px) {
     section {
