@@ -1,55 +1,64 @@
-.contenedor{
+.containerProduct {
     display: flex;
-    justify-content: space-around;
-    width: 95vw;
-    gap: 2vw;
-    
-    
-}
-.block{
-    width: 40vw;
-    display: block;
-    border-bottom: 1px black solid;
-}
-.title{
-    color: grey;
-    width: 40vw;
-    margin: 4vw;
-    h2{
-        font-size: 60px;
-    }
-    h3{
-        font-size: 40px;
-    }
-    h4{
-        font-size: 20px;
-        border-bottom: 1px black solid;
-        margin:10px 0 20px 0;
-        color: black;
-    }
-    img{
-        width: 20vw;
-        border-radius:100px;
-        border: 5px solid gainsboro;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-}
-.photo{
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5vw;
+    align-items: center;
+    width: 100vw;
+    min-height: 59vh;
+    gap: 10rem;
 }
-.link{
-    margin-top: 5vw;
+
+.cardProduct {
+    width: 40rem;
+    padding: 1rem;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    text-align: center;
 }
-    ul{
-    display: block;
-    margin-top: 5vw;
+
+h2,
+h4 {
+    padding: 1rem;
+    text-align: center;
 }
-li{
-    padding-bottom: 1vw;
+
+.cardProduct img {
+    width: 100px; 
+    height: auto; 
 }
-.description{
-    margin:4vw;
-    width: 40vw;
+
+
+img {
+    height: 10%;
+    width: 30%;
+    border-radius: 1rem;
+}
+
+.description {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+
+.btn ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+
+}
+
+a {
+    color: #f80a6564;
+}
+
+@media screen and (max-width: 768px) {
+    .containerProduct {
+        gap: 1rem;
+    }
+
+    .cardProduct {
+        width: 70%;
+    }
+   
 }
