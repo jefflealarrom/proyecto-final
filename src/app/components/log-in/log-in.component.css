@@ -10,7 +10,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 65vh;
 }
 
  form {
@@ -96,8 +96,10 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-    .formularios form {
+ form {
         width: 100%;
     }
-
+    .formularios{
+        min-height: 90vh;
+    }
 }

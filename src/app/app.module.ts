@@ -23,6 +23,7 @@ import { ShowUserComponent } from './components/show-user/show-user.component';
 import { EdisUserComponent } from './components/edis-user/edis-user.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
 import { AboutweComponent } from './components/aboutwe/aboutwe.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 
 
@@ -51,6 +52,7 @@ import { AboutweComponent } from './components/aboutwe/aboutwe.component';
     EdisUserComponent,
     BestSellerComponent,
     AboutweComponent,
+    DeleteComponent,
 
   ],
   imports: [

@@ -35,19 +35,19 @@ export class ShowUserComponent implements OnInit {
     }
   }
   
-  deleteUser(): void {
-    if (this.currentUser && this.currentUser.id) {
-      const userId = this.currentUser.id;
-      this.loginService.deleteUser(userId).subscribe({
-        next: (response: User) => {
-          console.log('Usuario eliminado:', response);
-          this.router.navigate(['/logOut']);
-        },
-        error: (error: User) => {
-          console.error('Error al eliminar usuario:', error);
-        }
-      });
-    }
-  }
+  // deleteUser(): void {
+  //   if (this.currentUser && this.currentUser.id) {
+  //     const userId = this.currentUser.id;
+  //     this.loginService.deleteUser(userId).subscribe({
+  //       next: (response: User) => {
+  //         console.log('Usuario eliminado:', response);
+  //         this.router.navigate(['/logOut']);
+  //       },
+  //       error: (error: User) => {
+  //         console.error('Error al eliminar usuario:', error);
+  //       }
+  //     });
+  //   }
+  // }
 
 }

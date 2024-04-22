@@ -2,15 +2,16 @@
     text-align: center;
     margin-bottom: 2rem;
   }
+
   label {
-   display: none;
+    display: none;
   }
 
   .formularios {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
   }
 
   form {
@@ -41,11 +42,12 @@
     transition: border-color 0.3s;
     text-align: center;
   }
+
   input[type="email"]:focus,
   input[type="password"]:focus,
   input[type="text"]:focus {
-      border-color: #f80a6564;
-      outline: none;
+    border-color: #f80a6564;
+    outline: none;
   }
 
 
@@ -85,23 +87,25 @@
 
   .send {
     position: absolute;
-    color: black;
+    color: #f80a6564;
     margin-top: 1rem;
-
-    a {
-        text-decoration: none;
-        color: black;
-
-        &:hover {
-            text-decoration: underline;
-            color: #f80a6564;
-        }
-    }
+    font-size: 1rem;
+    font-style: italic;
   }
+
+
 
   @media (max-width: 768px) {
     form {
       width: 100%;
+
     }
 
+    .small {
+      font-size: 0.7rem;
+    }
+
+    .formularios {
+      height: auto;
+    }
   }

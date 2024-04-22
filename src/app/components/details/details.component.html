@@ -1,22 +1,20 @@
 <section class="container" *ngFor="let product of products">
-  <button class="home-button-all" routerLink="/home">↩︎</button>
+  <button class="home-button-all" [routerLink]="['/allProducts']">↩︎</button>
   <article class="photo">
     <section class="image-container">
-      <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 0">
-      <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1">
-      <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 2">
-      <button class="home-button" routerLink="/home">↩︎</button>
+      <img [src]="product.img_three" alt="{{ product.name }}" *ngIf="index === 0" class="show-image"
+        [class.show-image]="index === 0">
+      <img [src]="product.img_two" alt="{{ product.name }}" *ngIf="index === 1" class="show-image"
+        [class.show-image]="index === 1">
+      <img [src]="product.img_one" alt="{{ product.name }}" *ngIf="index === 2" 
+        [class.show-image]="index === 2">
+      <button class="home-button" [routerLink]="['/allProducts']">↩︎</button>
     </section>
     <section class="buttons">
       <button class="more" (click)="nextImage()">↾</button>
       <button class="less" (click)="prevImage()">⇂</button>
     </section>
   </article>
-
-
-
-
-
   <article class="text">
     <section class="info">
       <h3>{{ product.name }}</h3>
@@ -28,26 +26,20 @@
           <article class="color">
             <p id="price">{{ product.price }}</p>
           </article>
-
-          
           <article class="btns">
             <label>
-              <select>
+              <select #quantitySelect (change)="onQuantityChange(quantitySelect.value)">
                 <option value="">Seleccione una cantidad</option>
-                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
             </label>
-            <button (click)="addToCart(product)" routerLink="/shop">Añadir a la cesta</button>
+            <button (click)="addToCart(product)" [routerLink]="['/shop']" [disabled]="!selectedQuantity">Añadir a la cesta</button>
           </article>
         </section>
       </article>
     </section>
   </article>
 </section>
-
-
-

@@ -25,10 +25,10 @@
             [ngClass]="{'button-enabled': formulario.valid}">Enviar</button>
             <button [routerLink]="['/registre']" type="submit">No tienes cuenta? Registrate</button>
         <div *ngIf="mensajeUser" class="send">
-            <a [routerLink]="'/registrar'">{{ mensajeUser }}</a>
+            <a [routerLink]="['/registrar']">{{ mensajeUser }}</a>
         </div>
         <div *ngIf="mensajeError" class="send">
-            <a [routerLink]="'/registrar'">{{ mensajeError }}</a>
+            <a [routerLink]="['/registrar']">{{ mensajeError }}</a>
         </div>
     </form>
 </section>

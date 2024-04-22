@@ -17,6 +17,8 @@ export class DetailsComponent {
   router = inject(ActivatedRoute)
   index: number = 0;
   shopService = inject(ShopService)
+  selectedQuantity: number = 1;
+
   
 
   ngOnInit(): void {
@@ -32,22 +34,26 @@ export class DetailsComponent {
   }
 
   nextImage() {
-    const product = this.products[0];
-    const numImages = [product.img_one, product.img_two, product.img_three].filter(img => img).length;
-    if (this.index < numImages - 1) {
-      this.index++;
-    }
+    const numImages = 3;
+    this.index = (this.index + 1) % numImages;
   }
-
+  
   prevImage() {
-    if (this.index > 0) {
-      this.index--;
-    }
+    const numImages = 3; 
+    this.index = (this.index - 1 + numImages) % numImages;
+  }
+  
+
+  onQuantityChange(value: string): void {
+    this.selectedQuantity = parseInt(value, 10);
   }
 
-  addToCart(product: Products) {
-    this.shopService.addToCart(product);
+  addToCart(product: Products) { 
+    const quantityToAdd = this.selectedQuantity !== null ? this.selectedQuantity : 1;
+    this.shopService.addToCart(product, quantityToAdd);
   }
+  
+    
 
 }
 

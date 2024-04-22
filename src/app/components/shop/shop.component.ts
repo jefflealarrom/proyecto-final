@@ -24,13 +24,15 @@ export class ShopComponent implements OnInit {
 
   loadCartItems() {
     this.cartItems = this.shopService.cartItems;
+  
   }
 
-  addToCart(product: Products) {
-    this. shopService.addToCart(product);
+  addToCart(product: Products, quantity: number) {
+    this.shopService.addToCart(product, quantity);
     this.loadCartItems();
     this.calculateTotal();
   }
+  
 
   removeCart(product: Products) {
     this.shopService.removeCart(product);
@@ -51,13 +53,47 @@ export class ShopComponent implements OnInit {
   deleteAll() {
     this.shopService.deleteAll();
     this.loadCartItems();
+    this.calculateTotal();
   }
 
   calculateTotal() {
     this.total = this.cartItems.reduce((acc, item) => {
       const price = parseFloat(item.price.replace(',', '.'));
-      return acc + price;
+      return acc + price * item.quantity;
     }, 0);
+    this.total = parseFloat(this.total.toFixed(2));
   }
-}
 
+
+  getProductQuantity(productId: string): number {
+    return this.shopService.getProductQuantityById(productId);
+  }
+  
+
+  getProductQuantityById(productId: string): number {
+    return this.shopService.getProductTotalPriceById(productId);
+  }
+
+
+  getProductTotalPrice(productId: string): number {
+    return this.shopService.getProductTotalPriceById(productId);
+  }
+  
+  increaseQuantity(product: Products): void {
+    const index = this.cartItems.findIndex(item => item.id === product.id);
+    if (index !== -1) {
+      this.cartItems[index].quantity++;
+      this.calculateTotal();
+    }
+  }
+
+  decreaseQuantity(product: Products): void {
+    const index = this.cartItems.findIndex(item => item.id === product.id);
+    if (index !== -1 && this.cartItems[index].quantity > 1) {
+      this.cartItems[index].quantity--;
+      this.calculateTotal();
+    }
+  
+  
+}
+}

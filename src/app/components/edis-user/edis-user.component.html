@@ -1,25 +1,23 @@
-<form>
-  <section>
+<form class="container">
+  <div class="avatar">
     <img *ngIf="currentUser.image" [src]="currentUser.image" alt="Imagen de perfil">
+  </div>
+  <article class="info">
     <label for="image">URL de la imagen de perfil:</label>
     <input type="text" id="image" name="image" [(ngModel)]="currentUser.image" required>
-  </section>
-  <section>
-    <label for="username">Nombre:</label>
-    <input type="text" id="username" name="username" autocomplete="username" [(ngModel)]="currentUser.name" required>
-  </section>
-  <section>
-    <label for="lastname">Apellido:</label>
-    <input type="text" id="lastname" name="lastname"  [(ngModel)]="currentUser.lastname" required>
-  </section>
-  <section>
-    <label for="new-password">Contraseña:</label>
-    <input type="password" id="new-password" name="new-password" autocomplete="new-password" [(ngModel)]="currentUser.password" required>
-  </section>
-  <!-- <div>
-    <label for="image">Imagen de perfil:</label>
-    <input type="file" id="image" name="image" accept="image/*">
-    <img *ngIf="currentUser.img" [src]="currentUser.image" alt="Imagen de perfil">
-  </div> -->
-  <button type="button" (click)="saveChanges()">Guardar cambios</button>
+    <section>
+      <label for="username">Nombre:</label>
+      <input type="text" id="username" name="username" autocomplete="username" [(ngModel)]="currentUser.name" required>
+    </section>
+    <section>
+      <label for="lastname">Apellido:</label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)]="currentUser.lastname" required>
+    </section>
+    <section>
+      <label for="new-password">Contraseña:</label>
+      <input type="password" id="new-password" name="new-password" autocomplete="new-password"
+        [(ngModel)]="currentUser.password" required>
+    </section>
+    <button type="button" (click)="saveChanges()">Guardar cambios</button>
+  </article>
 </form>

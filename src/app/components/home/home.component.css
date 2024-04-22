@@ -1,6 +1,5 @@
 section {
     width: 100vw;
-    height: auto;
 }
 
 .all {
@@ -19,7 +18,7 @@ section {
 .flex {
     display: flex;
     width: 100vw;
-    gap: 2rem;
+    gap: 1rem;
     margin: 1rem 0;
 }
 
@@ -69,8 +68,8 @@ a:hover {
 
 @media screen and (max-width: 600px) {
 
-    .all{
-       height: 30vh;  
+    .all {
+        height: 30vh;
     }
 
     .flex {

@@ -40,7 +40,7 @@ export class RegistreComponent {
         }
       });
     } else {
-      this.mensajeError = 'la contraseñas no coinciden.';
+      this.mensajeError = 'Las contraseñas no coinciden.';
     }
   }
 
@@ -50,7 +50,6 @@ export class RegistreComponent {
       const matchingControl = formGroup.get(matchingControlName);
 
       if (!control || !matchingControl) {
-        console.error('Form controls can not be found in the form group');
         return { controlNotFound: false };
       }
 
